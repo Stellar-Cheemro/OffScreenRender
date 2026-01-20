@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate-complete.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-build.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-configure.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-download.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-install.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-mkdir.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-patch.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-test.rule
+D:/Temp/code/OffScreenRendering/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update.rule
