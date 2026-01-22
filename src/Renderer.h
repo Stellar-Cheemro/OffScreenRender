@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <glad/glad.h>
 #include <vector>
@@ -6,7 +6,8 @@
 #include "Framebuffer.h"
 #include "Scene.h"
 
-class Renderer {
+class Renderer
+{
 public:
     Renderer(int width, int height);
     ~Renderer();
@@ -18,12 +19,12 @@ public:
 private:
     int screenWidth, screenHeight;
     unsigned int quadVAO, quadVBO;
-    
-    Shader* sceneShader;
-    Shader* screenShader;
-    Framebuffer* fbo;
-    Scene* scene;
-    
+
+    Shader *sceneShader;
+    Shader *screenShader;
+    Framebuffer *fbo;
+    Scene *scene;
+
     void InitQuad();
     void RenderScene();
     void RenderScreen();

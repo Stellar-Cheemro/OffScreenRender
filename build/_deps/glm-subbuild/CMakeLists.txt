@@ -1,7 +1,7 @@
 # Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
 # file LICENSE.rst or https://cmake.org/licensing for details.
 
-cmake_minimum_required(VERSION 4.2.1)
+cmake_minimum_required(VERSION 4.2.0)
 
 # Reject any attempt to use a toolchain file. We must not use one because
 # we could be downloading it here. If the CMAKE_TOOLCHAIN_FILE environment
@@ -20,8 +20,8 @@ project(glm-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(glm-populate
                      "UPDATE_DISCONNECTED" "False" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR"
-                    SOURCE_DIR          "D:/Temp/code/OffScreenRendering/extern/glm"
-                    BINARY_DIR          "D:/Temp/code/OffScreenRendering/build/_deps/glm-build"
+                    SOURCE_DIR          "C:/Users/31009/Desktop/OffScreenRender/extern/glm"
+                    BINARY_DIR          "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

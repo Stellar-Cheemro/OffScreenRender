@@ -1,17 +1,19 @@
-#include "Renderer.h"
+﻿#include "Renderer.h"
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(height) {
+Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(height)
+{
     sceneShader = nullptr;
     screenShader = nullptr;
     fbo = nullptr;
     scene = nullptr;
 }
 
-Renderer::~Renderer() {
+Renderer::~Renderer()
+{
     delete sceneShader;
     delete screenShader;
     delete fbo;
@@ -20,7 +22,8 @@ Renderer::~Renderer() {
     glDeleteBuffers(1, &quadVBO);
 }
 
-void Renderer::Init() {
+void Renderer::Init()
+{
     glEnable(GL_DEPTH_TEST);
 
     // 加载并编译着色器：场景渲染 & 屏幕后处理
@@ -40,29 +43,30 @@ void Renderer::Init() {
     InitQuad();
 }
 
-void Renderer::InitQuad() {
-    float quadVertices[] = { // 标准化设备坐标中填充整个屏幕的四边形的顶点属性。
-        // 位置       // 纹理坐标
-        -1.0f,  1.0f,  0.0f, 1.0f,
-        -1.0f, -1.0f,  0.0f, 0.0f,
-         1.0f, -1.0f,  1.0f, 0.0f,
+void Renderer::InitQuad()
+{
+    float quadVertices[] = {// 标准化设备坐标中填充整个屏幕的四边形的顶点属性。
+                            // 位置       // 纹理坐标
+                            -1.0f, 1.0f, 0.0f, 1.0f,
+                            -1.0f, -1.0f, 0.0f, 0.0f,
+                            1.0f, -1.0f, 1.0f, 0.0f,
 
-        -1.0f,  1.0f,  0.0f, 1.0f,
-         1.0f, -1.0f,  1.0f, 0.0f,
-         1.0f,  1.0f,  1.0f, 1.0f
-    };
+                            -1.0f, 1.0f, 0.0f, 1.0f,
+                            1.0f, -1.0f, 1.0f, 0.0f,
+                            1.0f, 1.0f, 1.0f, 1.0f};
     glGenVertexArrays(1, &quadVAO);
     glGenBuffers(1, &quadVBO);
     glBindVertexArray(quadVAO);
     glBindBuffer(GL_ARRAY_BUFFER, quadVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(quadVertices), &quadVertices, GL_STATIC_DRAW);
     glEnableVertexAttribArray(0);
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)0);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)0);
     glEnableVertexAttribArray(1);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float)));
 }
 
-void Renderer::Render() {
+void Renderer::Render()
+{
     float time = (float)glfwGetTime();
 
     // --- 第一阶段：离屏渲染 ---
@@ -85,13 +89,13 @@ void Renderer::Render() {
     sceneShader->setMat4("model", model);
 
     scene->Draw();
-    
+
     // 解绑 FBO，恢复默认帧缓冲区
     fbo->Unbind();
 
     // --- 第二阶段：屏幕后处理 ---
     // 可以在这里禁用深度测试，这对于绘制全屏四边形往往是好的
-    glDisable(GL_DEPTH_TEST); 
+    glDisable(GL_DEPTH_TEST);
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // 纯白背景清屏（实际上会被四边形覆盖）
     glClear(GL_COLOR_BUFFER_BIT);
 
@@ -102,11 +106,12 @@ void Renderer::Render() {
     glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 
-void Renderer::Resize(int width, int height) {
+void Renderer::Resize(int width, int height)
+{
     screenWidth = width;
     screenHeight = height;
     glViewport(0, 0, width, height);
-    
+
     // 如果需要，使用新尺寸重新创建 FBO，确保严格匹配
     delete fbo;
     fbo = new Framebuffer(width, height);

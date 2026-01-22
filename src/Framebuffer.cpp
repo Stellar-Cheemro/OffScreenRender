@@ -1,6 +1,7 @@
-#include "Framebuffer.h"
+﻿#include "Framebuffer.h"
 
-Framebuffer::Framebuffer(int width, int height) : width(width), height(height) {
+Framebuffer::Framebuffer(int width, int height) : width(width), height(height)
+{
     glGenFramebuffers(1, &fbo);
     glBindFramebuffer(GL_FRAMEBUFFER, fbo);
 
@@ -15,8 +16,8 @@ Framebuffer::Framebuffer(int width, int height) : width(width), height(height) {
     // 创建深度/模板渲染缓冲对象
     glGenRenderbuffers(1, &rbo);
     glBindRenderbuffer(GL_RENDERBUFFER, rbo);
-    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height); 
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo); 
+    glRenderbufferStorage(GL_RENDERBUFFER, GL_DEPTH24_STENCIL8, width, height);
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_DEPTH_STENCIL_ATTACHMENT, GL_RENDERBUFFER, rbo);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
         std::cout << "错误::帧缓冲区:: 帧缓冲区不完整！" << std::endl;
@@ -24,18 +25,21 @@ Framebuffer::Framebuffer(int width, int height) : width(width), height(height) {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
-Framebuffer::~Framebuffer() {
+Framebuffer::~Framebuffer()
+{
     glDeleteFramebuffers(1, &fbo);
     glDeleteTextures(1, &textureColorBuffer);
     glDeleteRenderbuffers(1, &rbo);
 }
 
-void Framebuffer::Bind() {
+void Framebuffer::Bind()
+{
     glBindFramebuffer(GL_FRAMEBUFFER, fbo);
     glViewport(0, 0, width, height);
 }
 
-void Framebuffer::Unbind() {
+void Framebuffer::Unbind()
+{
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     // 通常我们在主循环或渲染器中重置视口，但确保解绑
 }

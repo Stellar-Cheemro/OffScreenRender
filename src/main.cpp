@@ -1,17 +1,36 @@
-#include <glad/glad.h>
+﻿#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
+#include <chrono>
 
 #include "Renderer.h"
+#include "Worker.h"
+#include "ScreenRenderer.h"
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void framebuffer_size_callback(GLFWwindow *window, int width, int height);
 
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 1920;
+const unsigned int SCR_HEIGHT = 1080;
 
-Renderer* renderer = nullptr;
+Renderer *renderer = nullptr;
 
-int main() {
+int main(int argc, char** argv)
+{
+    bool singleMode = false;
+    int cpuLoad = 0; // arbitrary load units
+    for (int i = 1; i < argc; ++i) if (std::string(argv[i]) == "--single") singleMode = true;
+    for (int i = 1; i < argc; ++i)
+    {
+        std::string s = argv[i];
+        if (s.rfind("--cpu-load=", 0) == 0)
+        {
+            try { cpuLoad = std::stoi(s.substr(11)); } catch(...) { cpuLoad = 0; }
+        }
+        else if (s == "--cpu-load" && i + 1 < argc)
+        {
+            try { cpuLoad = std::stoi(argv[++i]); } catch(...) { cpuLoad = 0; }
+        }
+    }
     // 1. 初始化 GLFW
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -19,8 +38,9 @@ int main() {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // 2. 创建窗口对象
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "OffScreenRendering Demo", NULL, NULL);
-    if (window == NULL) {
+    GLFWwindow *window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "OffScreenRendering Demo", NULL, NULL);
+    if (window == NULL)
+    {
         std::cout << "创建 GLFW 窗口失败" << std::endl;
         glfwTerminate();
         return -1;
@@ -30,43 +50,115 @@ int main() {
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
     // 4. 初始化 GLAD（必须在有上下文的线程中调用）
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
         std::cout << "初始化 GLAD 失败" << std::endl;
         return -1;
     }
 
     std::cout << "GLAD 已初始化。OpenGL 版本：" << glGetString(GL_VERSION) << std::endl;
 
-    // 5. 创建并初始化渲染器（包含 Shader 编译、FBO 创建、模型加载）
-    renderer = new Renderer(SCR_WIDTH, SCR_HEIGHT);
-    
-    std::cout << "正在初始化渲染器..." << std::endl;
-    renderer->Init();
-    std::cout << "渲染器已初始化。开始循环..." << std::endl;
+    // 5. 根据模式初始化：单线程（Renderer）或多线程（Worker + ScreenRenderer）
+    Renderer* singleRenderer = nullptr;
+    Worker* worker = nullptr;
+    ScreenRenderer* screen = nullptr;
 
-    // 6. 渲染循环
-    while (!glfwWindowShouldClose(window)) {
+    if (singleMode) {
+        singleRenderer = new Renderer(SCR_WIDTH, SCR_HEIGHT);
+        singleRenderer->Init();
+        std::cout << "Single-thread renderer initialized. Starting loop..." << std::endl;
+    } else {
+        worker = new Worker(window, SCR_WIDTH, SCR_HEIGHT);
+        worker->Start();
+        screen = new ScreenRenderer();
+        screen->Init();
+        std::cout << "Worker started and screen renderer initialized. Starting loop..." << std::endl;
+    }
+
+    // 6. 渲染循环（带 FPS/帧时统计）
+    using clock = std::chrono::high_resolution_clock;
+    auto lastReport = clock::now();
+    int frames = 0;
+    double accumFrameMs = 0.0;
+
+    // helper: simulate CPU-heavy work on main thread
+    auto DoHeavyWork = [](int units){
+        if (units <= 0) return;
+        volatile double acc = 0.0;
+        int loops = units * 10000;
+        for (int i = 0; i < loops; ++i)
+        {
+            acc += sqrt((double)(i % 100 + 1));
+        }
+    };
+
+    while (!glfwWindowShouldClose(window))
+    {
         // 处理键盘输入
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
             glfwSetWindowShouldClose(window, true);
 
-        // 执行一帧渲染
-        renderer->Render();
+
+        // 计时并执行一帧：单线程直接渲染，多线程绘制 worker 的纹理
+        auto t0 = clock::now();
+        // simulate main-thread CPU work (UI, physics, etc.)
+        DoHeavyWork(cpuLoad);
+        if (singleMode) {
+            singleRenderer->Render();
+        } else {
+            unsigned int tex = worker->TryGetReadyTexture();
+            static unsigned int lastTex = 0;
+            if (tex)
+            {
+                lastTex = tex;
+                screen->DrawTexture(tex);
+            }
+            else if (lastTex)
+            {
+                // no new ready texture yet, reuse last one to avoid blocking
+                screen->DrawTexture(lastTex);
+            }
+        }
+        auto t1 = clock::now();
+
+        std::chrono::duration<double, std::milli> frameMs = t1 - t0;
+        accumFrameMs += frameMs.count();
+        frames++;
 
         // 交换缓冲并检查事件
         glfwSwapBuffers(window);
         glfwPollEvents();
+
+        // 每秒输出一次 FPS 和平均帧时
+        auto now = clock::now();
+        std::chrono::duration<double> elapsed = now - lastReport;
+        if (elapsed.count() >= 1.0)
+        {
+            double avgMs = (frames > 0) ? (accumFrameMs / frames) : 0.0;
+            std::cout << "FPS: " << frames << "  Avg frame time: " << avgMs << " ms" << std::endl;
+            frames = 0;
+            accumFrameMs = 0.0;
+            lastReport = now;
+        }
     }
 
     // 7. 清理资源
-    delete renderer;
+    if (singleMode) {
+        delete singleRenderer;
+    } else {
+        worker->Stop();
+        delete worker;
+        delete screen;
+    }
     glfwTerminate();
     return 0;
 }
 
 // 窗口大小改变回调函数
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-    if (renderer) {
+void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+{
+    if (renderer)
+    {
         renderer->Resize(width, height);
     }
 }

@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "D:/Temp/code/OffScreenRendering/extern/glm")
-  file(MAKE_DIRECTORY "D:/Temp/code/OffScreenRendering/extern/glm")
+if(NOT EXISTS "C:/Users/31009/Desktop/OffScreenRender/extern/glm")
+  file(MAKE_DIRECTORY "C:/Users/31009/Desktop/OffScreenRender/extern/glm")
 endif()
 file(MAKE_DIRECTORY
-  "D:/Temp/code/OffScreenRendering/build/_deps/glm-build"
-  "D:/Temp/code/OffScreenRendering/build/_deps/glm-subbuild/glm-populate-prefix"
-  "D:/Temp/code/OffScreenRendering/build/_deps/glm-subbuild/glm-populate-prefix/tmp"
-  "D:/Temp/code/OffScreenRendering/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
-  "D:/Temp/code/OffScreenRendering/build/_deps/glm-subbuild/glm-populate-prefix/src"
-  "D:/Temp/code/OffScreenRendering/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
+  "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-build"
+  "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/glm-populate-prefix"
+  "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/glm-populate-prefix/tmp"
+  "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
+  "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/glm-populate-prefix/src"
+  "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp"
 )
 
-set(configSubDirs )
+set(configSubDirs Debug)
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "D:/Temp/code/OffScreenRendering/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "D:/Temp/code/OffScreenRendering/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/glm-populate-prefix/src/glm-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

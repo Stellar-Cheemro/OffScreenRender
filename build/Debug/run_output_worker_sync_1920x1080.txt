@@ -1,0 +1,11 @@
+GLAD 已初始化。OpenGL 版本：3.3.0 Core Profile Context 22.40.70.06.230724
+Worker started and screen renderer initialized. Starting loop...
+FPS: 2425  Avg frame time: 0.0378767 ms
+FPS: 2325  Avg frame time: 0.0313123 ms
+FPS: 3599  Avg frame time: 0.0206529 ms
+FPS: 4489  Avg frame time: 0.0161005 ms
+FPS: 4776  Avg frame time: 0.0121707 ms
+FPS: 4343  Avg frame time: 0.0194513 ms
+FPS: 4249  Avg frame time: 0.015998 ms
+FPS: 4620  Avg frame time: 0.0128446 ms
+FPS: 4606  Avg frame time: 0.0170359 ms

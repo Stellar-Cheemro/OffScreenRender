@@ -1,0 +1,144 @@
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-MKDIR.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -Dcfgdir=/Debug -P C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-DOWNLOAD.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-UPDATE.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-update
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-PATCH.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\31009\Desktop\OffScreenRender\build\_deps\glfw-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\31009\Desktop\OffScreenRender\build\_deps\glfw-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\31009\Desktop\OffScreenRender\build\_deps\glfw-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\EF03CB0F08D0B394ABF86953AE471A10\GLFW-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\31009\Desktop\OffScreenRender\build\_deps\glfw-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\182A4E13CEC167B6A3FE3F39DFDADE97\GLFW-POPULATE-COMPLETE.RULE
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/CMakeFiles/Debug/glfw-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E touch C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKEFILES\034ABD4B1604C8B6BFB413C091B02F7F\GLFW-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\31009\DESKTOP\OFFSCREENRENDER\BUILD\_DEPS\GLFW-SUBBUILD\CMAKELISTS.TXT
+setlocal
+C:\msys64\mingw64\bin\cmake.exe -SC:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild -BC:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild --check-stamp-file C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

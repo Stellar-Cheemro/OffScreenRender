@@ -1,11 +1,11 @@
 {
 	"InstallScripts" : 
 	[
-		"D:/Temp/code/OffScreenRendering/build/cmake_install.cmake",
-		"D:/Temp/code/OffScreenRendering/build/_deps/glfw-build/cmake_install.cmake",
-		"D:/Temp/code/OffScreenRendering/build/_deps/glfw-build/src/cmake_install.cmake",
-		"D:/Temp/code/OffScreenRendering/build/_deps/glm-build/cmake_install.cmake",
-		"D:/Temp/code/OffScreenRendering/build/_deps/glm-build/glm/cmake_install.cmake"
+		"C:/Users/31009/Desktop/OffScreenRender/build/cmake_install.cmake",
+		"C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-build/cmake_install.cmake",
+		"C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-build/src/cmake_install.cmake",
+		"C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-build/cmake_install.cmake",
+		"C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-build/glm/cmake_install.cmake"
 	],
 	"Parallel" : false
 }
