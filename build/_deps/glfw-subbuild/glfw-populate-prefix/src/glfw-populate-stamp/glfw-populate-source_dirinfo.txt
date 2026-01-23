@@ -4,6 +4,6 @@
 
 method=source_dir
 command=
-source_dir=C:/Users/31009/Desktop/OffScreenRender/extern/glfw
+source_dir=D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glfw
 work_dir=
 

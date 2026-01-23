@@ -7,7 +7,17 @@
 
 Worker::Worker(GLFWwindow *shareWindow, int width, int height)
     : shareWindow(shareWindow), workerWindow(nullptr), width(width), height(height),
-      fboA(nullptr), fboB(nullptr), frontFbo(nullptr), backFbo(nullptr), scene(nullptr), running(false), frontTexture(0), latestFence(nullptr) {}
+      fboA(nullptr), fboB(nullptr), frontFbo(nullptr), backFbo(nullptr), scene(nullptr), running(false), frontTexture(0), latestFence(nullptr)
+{
+    // create an invisible window sharing resources with the main window
+    // This must be done on the main thread
+    glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+    workerWindow = glfwCreateWindow(1, 1, "worker", NULL, shareWindow);
+    if (!workerWindow)
+    {
+        std::cerr << "Failed to create worker window/context" << std::endl;
+    }
+}
 
 Worker::~Worker()
 {
@@ -91,12 +101,8 @@ unsigned int Worker::TryGetReadyTexture()
 
 void Worker::ThreadMain()
 {
-    // create an invisible window sharing resources with the main window
-    glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
-    workerWindow = glfwCreateWindow(1, 1, "worker", NULL, shareWindow);
     if (!workerWindow)
     {
-        std::cerr << "Failed to create worker window/context" << std::endl;
         running = false;
         return;
     }

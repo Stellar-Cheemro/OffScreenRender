@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-subbuild/cmake_install.cmake"
+		"D:/Temp/offscreenrender/code/chenyu/OffScreenRender/build/_deps/glm-subbuild/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -56,18 +56,18 @@ RM = D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Temp\code\OffScreenRendering
+CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Temp\code\OffScreenRendering\build
+CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	D:\Code\Tool\Cmake\bin\cmake-gui.exe -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
+	D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\code\OffScreenRendering\build\CMakeFiles D:\Temp\code\OffScreenRendering\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\code\OffScreenRendering\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,17 +129,17 @@ glad/fast:
 .PHONY : glad/fast
 
 #=============================================================================
-# Target rules for targets named OffScreenRendering
+# Target rules for targets named OffScreenRender
 
 # Build rule for target.
-OffScreenRendering: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 OffScreenRendering
-.PHONY : OffScreenRendering
+OffScreenRender: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 OffScreenRender
+.PHONY : OffScreenRender
 
 # fast build rule for target.
-OffScreenRendering/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/build
-.PHONY : OffScreenRendering/fast
+OffScreenRender/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/build
+.PHONY : OffScreenRender/fast
 
 #=============================================================================
 # Target rules for targets named glfw
@@ -209,7 +209,7 @@ src/Framebuffer.obj: src/Framebuffer.cpp.obj
 
 # target to build an object file
 src/Framebuffer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Framebuffer.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj
 .PHONY : src/Framebuffer.cpp.obj
 
 src/Framebuffer.i: src/Framebuffer.cpp.i
@@ -217,7 +217,7 @@ src/Framebuffer.i: src/Framebuffer.cpp.i
 
 # target to preprocess a source file
 src/Framebuffer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Framebuffer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.i
 .PHONY : src/Framebuffer.cpp.i
 
 src/Framebuffer.s: src/Framebuffer.cpp.s
@@ -225,7 +225,7 @@ src/Framebuffer.s: src/Framebuffer.cpp.s
 
 # target to generate assembly for a file
 src/Framebuffer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Framebuffer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.s
 .PHONY : src/Framebuffer.cpp.s
 
 src/Renderer.obj: src/Renderer.cpp.obj
@@ -233,7 +233,7 @@ src/Renderer.obj: src/Renderer.cpp.obj
 
 # target to build an object file
 src/Renderer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Renderer.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj
 .PHONY : src/Renderer.cpp.obj
 
 src/Renderer.i: src/Renderer.cpp.i
@@ -241,7 +241,7 @@ src/Renderer.i: src/Renderer.cpp.i
 
 # target to preprocess a source file
 src/Renderer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Renderer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.i
 .PHONY : src/Renderer.cpp.i
 
 src/Renderer.s: src/Renderer.cpp.s
@@ -249,7 +249,7 @@ src/Renderer.s: src/Renderer.cpp.s
 
 # target to generate assembly for a file
 src/Renderer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Renderer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.s
 .PHONY : src/Renderer.cpp.s
 
 src/Scene.obj: src/Scene.cpp.obj
@@ -257,7 +257,7 @@ src/Scene.obj: src/Scene.cpp.obj
 
 # target to build an object file
 src/Scene.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Scene.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj
 .PHONY : src/Scene.cpp.obj
 
 src/Scene.i: src/Scene.cpp.i
@@ -265,7 +265,7 @@ src/Scene.i: src/Scene.cpp.i
 
 # target to preprocess a source file
 src/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Scene.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Scene.cpp.i
 .PHONY : src/Scene.cpp.i
 
 src/Scene.s: src/Scene.cpp.s
@@ -273,15 +273,63 @@ src/Scene.s: src/Scene.cpp.s
 
 # target to generate assembly for a file
 src/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/Scene.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Scene.cpp.s
 .PHONY : src/Scene.cpp.s
+
+src/ScreenRenderer.obj: src/ScreenRenderer.cpp.obj
+.PHONY : src/ScreenRenderer.obj
+
+# target to build an object file
+src/ScreenRenderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj
+.PHONY : src/ScreenRenderer.cpp.obj
+
+src/ScreenRenderer.i: src/ScreenRenderer.cpp.i
+.PHONY : src/ScreenRenderer.i
+
+# target to preprocess a source file
+src/ScreenRenderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.i
+.PHONY : src/ScreenRenderer.cpp.i
+
+src/ScreenRenderer.s: src/ScreenRenderer.cpp.s
+.PHONY : src/ScreenRenderer.s
+
+# target to generate assembly for a file
+src/ScreenRenderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.s
+.PHONY : src/ScreenRenderer.cpp.s
+
+src/Worker.obj: src/Worker.cpp.obj
+.PHONY : src/Worker.obj
+
+# target to build an object file
+src/Worker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj
+.PHONY : src/Worker.cpp.obj
+
+src/Worker.i: src/Worker.cpp.i
+.PHONY : src/Worker.i
+
+# target to preprocess a source file
+src/Worker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Worker.cpp.i
+.PHONY : src/Worker.cpp.i
+
+src/Worker.s: src/Worker.cpp.s
+.PHONY : src/Worker.s
+
+# target to generate assembly for a file
+src/Worker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/Worker.cpp.s
+.PHONY : src/Worker.cpp.s
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -289,7 +337,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -297,7 +345,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRendering.dir\build.make CMakeFiles/OffScreenRendering.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\OffScreenRender.dir\build.make CMakeFiles/OffScreenRender.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -309,7 +357,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... update_mappings
-	@echo ... OffScreenRendering
+	@echo ... OffScreenRender
 	@echo ... glad
 	@echo ... glfw
 	@echo ... glm
@@ -325,6 +373,12 @@ help:
 	@echo ... src/Scene.obj
 	@echo ... src/Scene.i
 	@echo ... src/Scene.s
+	@echo ... src/ScreenRenderer.obj
+	@echo ... src/ScreenRenderer.i
+	@echo ... src/ScreenRenderer.s
+	@echo ... src/Worker.obj
+	@echo ... src/Worker.i
+	@echo ... src/Worker.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

@@ -49,16 +49,21 @@ int main(int argc, char** argv)
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // 4. 初始化 GLAD（必须在有上下文的线程中调用）
+    // 4. Initialize GLAD
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
-        std::cout << "初始化 GLAD 失败" << std::endl;
+        std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
 
-    std::cout << "GLAD 已初始化。OpenGL 版本：" << glGetString(GL_VERSION) << std::endl;
+    const GLubyte* glVersion = glGetString(GL_VERSION);
+    if (glVersion) {
+        std::cout << "GLAD initialized. OpenGL Version: " << reinterpret_cast<const char*>(glVersion) << std::endl;
+    } else {
+        std::cout << "GLAD initialized. OpenGL Version: NULL" << std::endl;
+    }
 
-    // 5. 根据模式初始化：单线程（Renderer）或多线程（Worker + ScreenRenderer）
+    // 5. Initialize based on mode
     Renderer* singleRenderer = nullptr;
     Worker* worker = nullptr;
     ScreenRenderer* screen = nullptr;
@@ -66,13 +71,20 @@ int main(int argc, char** argv)
     if (singleMode) {
         singleRenderer = new Renderer(SCR_WIDTH, SCR_HEIGHT);
         singleRenderer->Init();
-        std::cout << "Single-thread renderer initialized. Starting loop..." << std::endl;
+        std::cout << "Single-thread renderer initialized." << std::endl;
     } else {
+        std::cout << "Creating worker object..." << std::endl;
         worker = new Worker(window, SCR_WIDTH, SCR_HEIGHT);
+        
+        std::cout << "Starting worker thread..." << std::endl;
         worker->Start();
+        
+        std::cout << "Creating ScreenRenderer..." << std::endl;
         screen = new ScreenRenderer();
+        std::cout << "Initializing ScreenRenderer..." << std::endl;
         screen->Init();
-        std::cout << "Worker started and screen renderer initialized. Starting loop..." << std::endl;
+        
+        std::cout << "Initialization complete. Starting render loop..." << std::endl;
     }
 
     // 6. 渲染循环（带 FPS/帧时统计）
