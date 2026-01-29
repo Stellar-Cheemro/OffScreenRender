@@ -20,8 +20,8 @@ project(glm-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(glm-populate
                      "UPDATE_DISCONNECTED" "False" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR"
-                    SOURCE_DIR          "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm"
-                    BINARY_DIR          "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/build/_deps/glm-build"
+                    SOURCE_DIR          "D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm"
+                    BINARY_DIR          "D:/Temp/offscreenrender/code/master/OffScreenRender/build/_deps/glm-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

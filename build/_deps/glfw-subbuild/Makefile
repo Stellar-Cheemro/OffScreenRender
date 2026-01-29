@@ -56,10 +56,10 @@ RM = D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild
+CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild
+CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,16 +86,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-subbuild\CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target

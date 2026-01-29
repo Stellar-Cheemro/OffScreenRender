@@ -1,8 +1,8 @@
 CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj: \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Framebuffer.cpp \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Framebuffer.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/glad/glad.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Framebuffer.cpp \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Framebuffer.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/glad/glad.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stdint.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/crtdefs.h \

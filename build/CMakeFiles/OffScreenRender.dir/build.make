@@ -52,10 +52,10 @@ RM = D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender
+CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build
+CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/OffScreenRender.dir/depend.make
@@ -73,93 +73,93 @@ CMakeFiles/OffScreenRender.dir/codegen:
 
 CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj: CMakeFiles/OffScreenRender.dir/flags.make
 CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj: CMakeFiles/OffScreenRender.dir/includes_CXX.rsp
-CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj: D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Framebuffer.cpp
+CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj: D:/Temp/offscreenrender/code/master/OffScreenRender/src/Framebuffer.cpp
 CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj: CMakeFiles/OffScreenRender.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.obj -c D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Framebuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj"
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.obj -c D:\Temp\offscreenrender\code\master\OffScreenRender\src\Framebuffer.cpp
 
 CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.i"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Framebuffer.cpp > CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.i
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\master\OffScreenRender\src\Framebuffer.cpp > CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.i
 
 CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.s"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Framebuffer.cpp -o CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.s
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\master\OffScreenRender\src\Framebuffer.cpp -o CMakeFiles\OffScreenRender.dir\src\Framebuffer.cpp.s
 
 CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj: CMakeFiles/OffScreenRender.dir/flags.make
 CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj: CMakeFiles/OffScreenRender.dir/includes_CXX.rsp
-CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj: D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Renderer.cpp
+CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj: D:/Temp/offscreenrender/code/master/OffScreenRender/src/Renderer.cpp
 CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj: CMakeFiles/OffScreenRender.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.obj -c D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj"
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.obj -c D:\Temp\offscreenrender\code\master\OffScreenRender\src\Renderer.cpp
 
 CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.i"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Renderer.cpp > CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.i
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\master\OffScreenRender\src\Renderer.cpp > CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.i
 
 CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.s"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Renderer.cpp -o CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.s
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\master\OffScreenRender\src\Renderer.cpp -o CMakeFiles\OffScreenRender.dir\src\Renderer.cpp.s
 
 CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj: CMakeFiles/OffScreenRender.dir/flags.make
 CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj: CMakeFiles/OffScreenRender.dir/includes_CXX.rsp
-CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj: D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Scene.cpp
+CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj: D:/Temp/offscreenrender/code/master/OffScreenRender/src/Scene.cpp
 CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj: CMakeFiles/OffScreenRender.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Scene.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Scene.cpp.obj -c D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Scene.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj"
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Scene.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Scene.cpp.obj -c D:\Temp\offscreenrender\code\master\OffScreenRender\src\Scene.cpp
 
 CMakeFiles/OffScreenRender.dir/src/Scene.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OffScreenRender.dir/src/Scene.cpp.i"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Scene.cpp > CMakeFiles\OffScreenRender.dir\src\Scene.cpp.i
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\master\OffScreenRender\src\Scene.cpp > CMakeFiles\OffScreenRender.dir\src\Scene.cpp.i
 
 CMakeFiles/OffScreenRender.dir/src/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OffScreenRender.dir/src/Scene.cpp.s"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Scene.cpp -o CMakeFiles\OffScreenRender.dir\src\Scene.cpp.s
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\master\OffScreenRender\src\Scene.cpp -o CMakeFiles\OffScreenRender.dir\src\Scene.cpp.s
 
 CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj: CMakeFiles/OffScreenRender.dir/flags.make
 CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj: CMakeFiles/OffScreenRender.dir/includes_CXX.rsp
-CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj: D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/ScreenRenderer.cpp
+CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj: D:/Temp/offscreenrender/code/master/OffScreenRender/src/ScreenRenderer.cpp
 CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj: CMakeFiles/OffScreenRender.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.obj -c D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\ScreenRenderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj"
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.obj -c D:\Temp\offscreenrender\code\master\OffScreenRender\src\ScreenRenderer.cpp
 
 CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.i"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\ScreenRenderer.cpp > CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.i
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\master\OffScreenRender\src\ScreenRenderer.cpp > CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.i
 
 CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.s"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\ScreenRenderer.cpp -o CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.s
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\master\OffScreenRender\src\ScreenRenderer.cpp -o CMakeFiles\OffScreenRender.dir\src\ScreenRenderer.cpp.s
 
 CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj: CMakeFiles/OffScreenRender.dir/flags.make
 CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj: CMakeFiles/OffScreenRender.dir/includes_CXX.rsp
-CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj: D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Worker.cpp
+CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj: D:/Temp/offscreenrender/code/master/OffScreenRender/src/Worker.cpp
 CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj: CMakeFiles/OffScreenRender.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Worker.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Worker.cpp.obj -c D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Worker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj"
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\Worker.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\Worker.cpp.obj -c D:\Temp\offscreenrender\code\master\OffScreenRender\src\Worker.cpp
 
 CMakeFiles/OffScreenRender.dir/src/Worker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OffScreenRender.dir/src/Worker.cpp.i"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Worker.cpp > CMakeFiles\OffScreenRender.dir\src\Worker.cpp.i
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\master\OffScreenRender\src\Worker.cpp > CMakeFiles\OffScreenRender.dir\src\Worker.cpp.i
 
 CMakeFiles/OffScreenRender.dir/src/Worker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OffScreenRender.dir/src/Worker.cpp.s"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Worker.cpp -o CMakeFiles\OffScreenRender.dir\src\Worker.cpp.s
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\master\OffScreenRender\src\Worker.cpp -o CMakeFiles\OffScreenRender.dir\src\Worker.cpp.s
 
 CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: CMakeFiles/OffScreenRender.dir/flags.make
 CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: CMakeFiles/OffScreenRender.dir/includes_CXX.rsp
-CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/main.cpp
+CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: D:/Temp/offscreenrender/code/master/OffScreenRender/src/main.cpp
 CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: CMakeFiles/OffScreenRender.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OffScreenRender.dir/src/main.cpp.obj"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/main.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\main.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\main.cpp.obj -c D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OffScreenRender.dir/src/main.cpp.obj"
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OffScreenRender.dir/src/main.cpp.obj -MF CMakeFiles\OffScreenRender.dir\src\main.cpp.obj.d -o CMakeFiles\OffScreenRender.dir\src\main.cpp.obj -c D:\Temp\offscreenrender\code\master\OffScreenRender\src\main.cpp
 
 CMakeFiles/OffScreenRender.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/OffScreenRender.dir/src/main.cpp.i"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\main.cpp > CMakeFiles\OffScreenRender.dir\src\main.cpp.i
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\master\OffScreenRender\src\main.cpp > CMakeFiles\OffScreenRender.dir\src\main.cpp.i
 
 CMakeFiles/OffScreenRender.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/OffScreenRender.dir/src/main.cpp.s"
-	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\main.cpp -o CMakeFiles\OffScreenRender.dir\src\main.cpp.s
+	D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\master\OffScreenRender\src\main.cpp -o CMakeFiles\OffScreenRender.dir\src\main.cpp.s
 
 # Object files for target OffScreenRender
 OffScreenRender_OBJECTS = \
@@ -183,13 +183,16 @@ OffScreenRender.exe: CMakeFiles/OffScreenRender.dir/build.make
 OffScreenRender.exe: _deps/glfw-build/src/libglfw3.a
 OffScreenRender.exe: libglad.a
 OffScreenRender.exe: _deps/glm-build/glm/libglm.a
+OffScreenRender.exe: libimgui.a
+OffScreenRender.exe: _deps/glfw-build/src/libglfw3.a
+OffScreenRender.exe: libglad.a
 OffScreenRender.exe: CMakeFiles/OffScreenRender.dir/linkLibs.rsp
 OffScreenRender.exe: CMakeFiles/OffScreenRender.dir/objects1.rsp
 OffScreenRender.exe: CMakeFiles/OffScreenRender.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable OffScreenRender.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable OffScreenRender.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\OffScreenRender.dir\link.txt --verbose=$(VERBOSE)
-	D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E make_directory D:/Temp/offscreenrender/code/chenyu/OffScreenRender/build/shaders
-	D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E copy_directory D:/Temp/offscreenrender/code/chenyu/OffScreenRender/shaders D:/Temp/offscreenrender/code/chenyu/OffScreenRender/build/shaders
+	D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E make_directory D:/Temp/offscreenrender/code/master/OffScreenRender/build/shaders
+	D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E copy_directory D:/Temp/offscreenrender/code/master/OffScreenRender/shaders D:/Temp/offscreenrender/code/master/OffScreenRender/build/shaders
 
 # Rule to build all files generated by this target.
 CMakeFiles/OffScreenRender.dir/build: OffScreenRender.exe
@@ -200,6 +203,6 @@ CMakeFiles/OffScreenRender.dir/clean:
 .PHONY : CMakeFiles/OffScreenRender.dir/clean
 
 CMakeFiles/OffScreenRender.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Temp\offscreenrender\code\chenyu\OffScreenRender D:\Temp\offscreenrender\code\chenyu\OffScreenRender D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles\OffScreenRender.dir\DependInfo.cmake "--color=$(COLOR)" OffScreenRender
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Temp\offscreenrender\code\master\OffScreenRender D:\Temp\offscreenrender\code\master\OffScreenRender D:\Temp\offscreenrender\code\master\OffScreenRender\build D:\Temp\offscreenrender\code\master\OffScreenRender\build D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles\OffScreenRender.dir\DependInfo.cmake "--color=$(COLOR)" OffScreenRender
 .PHONY : CMakeFiles/OffScreenRender.dir/depend
 

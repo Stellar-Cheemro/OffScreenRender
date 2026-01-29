@@ -9,13 +9,13 @@ Worker::Worker(GLFWwindow *shareWindow, int width, int height)
     : shareWindow(shareWindow), workerWindow(nullptr), width(width), height(height),
       fboA(nullptr), fboB(nullptr), frontFbo(nullptr), backFbo(nullptr), scene(nullptr), running(false), frontTexture(0), latestFence(nullptr)
 {
-    // create an invisible window sharing resources with the main window
-    // This must be done on the main thread
+    // 创建一个不可见的窗口，与主窗口共享资源
+    // 必须在主线程中完成
     glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
     workerWindow = glfwCreateWindow(1, 1, "worker", NULL, shareWindow);
     if (!workerWindow)
     {
-        std::cerr << "Failed to create worker window/context" << std::endl;
+        std::cerr << "无法创建 Worker 窗口/上下文" << std::endl;
     }
 }
 
@@ -26,6 +26,17 @@ Worker::~Worker()
 
 void Worker::Start()
 {
+    // 如果窗口被销毁，重建它
+    if (!workerWindow)
+    {
+        glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
+        workerWindow = glfwCreateWindow(1, 1, "worker", NULL, shareWindow);
+        if (!workerWindow)
+        {
+            std::cerr << "无法重建 Worker 窗口/上下文" << std::endl;
+            return;
+        }
+    }
     running = true;
     workerThread = std::thread(&Worker::ThreadMain, this);
 }
@@ -35,17 +46,16 @@ void Worker::Stop()
     running = false;
     if (workerThread.joinable())
         workerThread.join();
+
+    // 线程会自行清理资源，这里只需销毁窗口
+    // 不要解绑主线程的上下文
     if (workerWindow)
     {
-        glfwMakeContextCurrent(nullptr);
         glfwDestroyWindow(workerWindow);
         workerWindow = nullptr;
     }
-    // delete framebuffers and scene
-    delete fboA;
-    delete fboB;
-    delete scene;
-    // delete any remaining fence
+
+    // 清理遗留的栅欄对象
     GLsync fence = latestFence.load();
     if (fence)
     {
@@ -61,11 +71,10 @@ unsigned int Worker::GetTextureID() const
 
 unsigned int Worker::GetReadyTexture()
 {
-    // wait on latest fence if present, then return front texture id
+    // 等待并获取最新的纹理
     GLsync fence = latestFence.exchange(nullptr);
     if (fence)
     {
-        // client wait for GPU to finish writing
         GLenum waitRes = glClientWaitSync(fence, GL_SYNC_FLUSH_COMMANDS_BIT, 1000000000);
         (void)waitRes;
         glDeleteSync(fence);
@@ -75,18 +84,18 @@ unsigned int Worker::GetReadyTexture()
 
 unsigned int Worker::TryGetReadyTexture()
 {
-    // Non-blocking check: return 0 if the latest fence is not yet signaled.
+    // 非阻塞检查：如果没有新栅欄，直接返回纹理（可能是旧的）
     GLsync fence = latestFence.load();
     if (!fence)
     {
-        // no outstanding fence, texture is ready
         return frontTexture.load();
     }
 
+    // 检查 GPU 命令是否完成
     GLenum waitRes = glClientWaitSync(fence, GL_SYNC_FLUSH_COMMANDS_BIT, 0);
     if (waitRes == GL_ALREADY_SIGNALED || waitRes == GL_CONDITION_SATISFIED)
     {
-        // try to consume the fence pointer (ensure we delete it only once)
+        // 尝试获取所有权并删除栅欄
         GLsync expected = fence;
         if (latestFence.compare_exchange_strong(expected, nullptr))
         {
@@ -95,7 +104,7 @@ unsigned int Worker::TryGetReadyTexture()
         return frontTexture.load();
     }
 
-    // not ready yet
+    // 未完成返回 0
     return 0;
 }
 
@@ -107,10 +116,10 @@ void Worker::ThreadMain()
         return;
     }
 
-    // make context current in this thread
+    // 设置当前线程上下文
     glfwMakeContextCurrent(workerWindow);
 
-    // initialize GL resources for offscreen rendering (double FBO)
+    // 初始化双缓冲 FBO
     fboA = new Framebuffer(width, height);
     fboB = new Framebuffer(width, height);
     frontFbo = fboA;
@@ -121,11 +130,14 @@ void Worker::ThreadMain()
     scene = new Scene();
     Shader sceneShader("shaders/scene.vert", "shaders/scene.frag");
 
-    // simple render loop with double-buffer and fence sync
+    // 渲染循环
     using clock = std::chrono::high_resolution_clock;
     while (running)
     {
-        // render to back FBO
+        // 更新负载
+        scene->SetWorkload(targetWorkload.load());
+
+        // 渲染到后缓冲
         backFbo->Bind();
         glEnable(GL_DEPTH_TEST);
         glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -144,19 +156,26 @@ void Worker::ThreadMain()
         scene->Draw();
         backFbo->Unbind();
 
-        // ensure commands are submitted and fence the GPU work
+        // 提交命令并插入栅欄
         glFlush();
         GLsync fence = glFenceSync(GL_SYNC_GPU_COMMANDS_COMPLETE, 0);
-        // publish fence and new front texture id
         latestFence.store(fence);
 
-        // swap front/back and publish new front texture id for main thread
+        // 交换前后缓冲
         std::swap(frontFbo, backFbo);
         frontTexture.store(frontFbo->GetTextureID());
 
-        // small sleep to avoid busy loop
-        std::this_thread::sleep_for(std::chrono::milliseconds(2));
+        // 无休眠全速运行
     }
 
-    // cleanup done in Stop()
+    // 线程退出前资源清理
+    delete fboA; 
+    delete fboB; 
+    delete scene;
+    fboA = nullptr;
+    fboB = nullptr;
+    scene = nullptr;
+    
+    // 解绑上下文
+    glfwMakeContextCurrent(nullptr);
 }

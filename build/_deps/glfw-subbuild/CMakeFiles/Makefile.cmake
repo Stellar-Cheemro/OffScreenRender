@@ -7,10 +7,8 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "D:/Code/Tool/MSYS2/mingw64/share/cmake/Modules/CMakeDetermineSystem.cmake"
   "D:/Code/Tool/MSYS2/mingw64/share/cmake/Modules/CMakeGenericSystem.cmake"
   "D:/Code/Tool/MSYS2/mingw64/share/cmake/Modules/CMakeInitializeConfigs.cmake"
-  "D:/Code/Tool/MSYS2/mingw64/share/cmake/Modules/CMakeSystem.cmake.in"
   "D:/Code/Tool/MSYS2/mingw64/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
   "D:/Code/Tool/MSYS2/mingw64/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
   "D:/Code/Tool/MSYS2/mingw64/share/cmake/Modules/ExternalProject.cmake"
@@ -36,7 +34,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/4.2.1/CMakeSystem.cmake"
   "glfw-populate-prefix/tmp/glfw-populate-mkdirs.cmake"
   "glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-source_dirinfo.txt"
   "glfw-populate-prefix/src/glfw-populate-stamp/glfw-populate-update-info.txt"

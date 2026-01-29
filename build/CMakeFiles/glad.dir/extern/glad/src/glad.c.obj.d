@@ -1,5 +1,5 @@
 CMakeFiles/glad.dir/extern/glad/src/glad.c.obj: \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\extern\glad\src\glad.c \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\extern\glad\src\glad.c \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stdio.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/corecrt.h \
@@ -23,8 +23,8 @@ CMakeFiles/glad.dir/extern/glad/src/glad.c.obj: \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/errno.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/string.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/glad/glad.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/glad/glad.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stdint.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \

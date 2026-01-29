@@ -52,10 +52,10 @@ RM = D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender
+CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build
+CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender\build
 
 # Utility rule file for update_mappings.
 
@@ -66,8 +66,8 @@ include _deps/glfw-build/src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include _deps/glfw-build/src/CMakeFiles/update_mappings.dir/progress.make
 
 _deps/glfw-build/src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\extern\glfw\src && D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -P D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\extern\glfw\src && D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -P D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glfw/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/codegen:
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/codegen
@@ -81,10 +81,10 @@ _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/build
 
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/clean:
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-build\src && $(CMAKE_COMMAND) -P CMakeFiles\update_mappings.dir\cmake_clean.cmake
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-build\src && $(CMAKE_COMMAND) -P CMakeFiles\update_mappings.dir\cmake_clean.cmake
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/clean
 
 _deps/glfw-build/src/CMakeFiles/update_mappings.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Temp\offscreenrender\code\chenyu\OffScreenRender D:\Temp\offscreenrender\code\chenyu\OffScreenRender\extern\glfw\src D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-build\src D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glfw-build\src\CMakeFiles\update_mappings.dir\DependInfo.cmake "--color=$(COLOR)" update_mappings
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Temp\offscreenrender\code\master\OffScreenRender D:\Temp\offscreenrender\code\master\OffScreenRender\extern\glfw\src D:\Temp\offscreenrender\code\master\OffScreenRender\build D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-build\src D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glfw-build\src\CMakeFiles\update_mappings.dir\DependInfo.cmake "--color=$(COLOR)" update_mappings
 .PHONY : _deps/glfw-build/src/CMakeFiles/update_mappings.dir/depend
 

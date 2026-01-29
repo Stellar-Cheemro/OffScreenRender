@@ -1,7 +1,7 @@
 CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\main.cpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/glad/glad.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\main.cpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/glad/glad.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stdint.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -13,7 +13,7 @@ CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stddef.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stddef.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glfw/include/GLFW/glfw3.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glfw/include/GLFW/glfw3.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/iostream \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/requires_hosted.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -148,13 +148,25 @@ CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/_timeval.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/parse_numbers.h \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Renderer.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/imgui/imgui.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/imgui/imconfig.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/float.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdarg.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/string.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/assert.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/imgui/backends/imgui_impl_glfw.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/imgui/backends/imgui_impl_opengl3.h \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Renderer.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/vector \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_uninitialized.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_vector.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stl_bvector.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/vector.tcc \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Shader.h \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Shader.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/fstream \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/codecvt.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
@@ -162,8 +174,8 @@ CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/fstream.tcc \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/sstream \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/sstream.tcc \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/glm.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/_fixes.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/glm.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/_fixes.hpp \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cmath \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/math.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/specfun.h \
@@ -179,39 +191,36 @@ CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/tr1/poly_hermite.tcc \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/tr1/poly_laguerre.tcc \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/tr1/riemann_zeta.tcc \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/setup.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/setup.hpp \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cassert \
- D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/assert.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/simd/platform.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/simd/platform.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/climits \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cfloat \
- D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/float.h \
- D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/float.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/fwd.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/qualifier.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/setup.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/vec2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_bool2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec2.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/compute_vector_relational.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_bool2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_float2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_float2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_double2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_double2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_int2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_int2_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/scalar_int_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/setup.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_uint2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_uint2_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/scalar_uint_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/vec3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_bool3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec3.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/compute_vector_decl.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/fwd.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/qualifier.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/setup.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/vec2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_bool2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec2.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/compute_vector_relational.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_bool2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_float2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_float2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_double2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_double2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_int2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_int2_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/scalar_int_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/setup.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_uint2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_uint2_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/scalar_uint_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/vec3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_bool3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec3.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/compute_vector_decl.hpp \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/functional \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/std_function.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/unordered_map \
@@ -224,116 +233,116 @@ CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/erase_if.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/array \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/compare \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/_vectorize.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_bool3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_float3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_float3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_double3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_double3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_int3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_int3_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_uint3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_uint3_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/vec4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_bool4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec4.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_bool4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_float4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_float4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_double4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_double4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_int4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_int4_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_uint4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/vector_uint4_sized.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat2x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double2x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat2x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat2x2.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/matrix.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat2x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double2x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat2x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat2x3.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double2x3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float2x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float2x3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat2x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double2x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat2x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat2x4.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double2x4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float2x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float2x4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat3x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double3x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat3x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat3x2.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double3x2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float3x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float3x2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat3x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double3x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat3x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat3x3.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/common.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_common.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/vector_relational.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_vector_relational.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/compute_common.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec1.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_vec1.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double3x3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float3x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float3x3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat3x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double3x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat3x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat3x4.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double3x4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float3x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float3x4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat4x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double4x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat4x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat4x2.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double4x2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float4x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float4x2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat4x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double4x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat4x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat4x3.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double4x3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float4x3.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float4x3_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/mat4x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double4x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat4x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_mat4x4.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/geometric.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_geometric.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/exponential.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_exponential.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double4x4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float4x4.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float4x4_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_matrix.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_double2x2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float2x2.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/ext/matrix_float2x2_precision.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/trigonometric.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_trigonometric.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/packing.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_packing.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_half.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/type_half.inl \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/integer.hpp \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/func_integer.inl \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Framebuffer.h \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Scene.h \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Worker.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/_vectorize.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_bool3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_float3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_float3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_double3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_double3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_int3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_int3_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_uint3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_uint3_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/vec4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_bool4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec4.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_bool4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_float4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_float4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_double4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_double4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_int4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_int4_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_uint4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/vector_uint4_sized.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat2x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double2x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat2x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat2x2.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/matrix.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat2x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double2x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat2x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat2x3.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double2x3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float2x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float2x3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat2x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double2x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat2x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat2x4.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double2x4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float2x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float2x4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat3x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double3x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat3x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat3x2.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double3x2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float3x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float3x2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat3x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double3x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat3x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat3x3.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/common.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_common.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/vector_relational.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_vector_relational.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/compute_common.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec1.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_vec1.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double3x3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float3x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float3x3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat3x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double3x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat3x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat3x4.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double3x4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float3x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float3x4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat4x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double4x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat4x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat4x2.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double4x2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float4x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float4x2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat4x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double4x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat4x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat4x3.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double4x3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float4x3.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float4x3_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/mat4x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double4x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat4x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_mat4x4.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/geometric.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_geometric.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/exponential.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_exponential.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double4x4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float4x4.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float4x4_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_matrix.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_double2x2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float2x2.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/ext/matrix_float2x2_precision.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/trigonometric.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_trigonometric.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/packing.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_packing.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_half.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/type_half.inl \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/integer.hpp \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/func_integer.inl \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Framebuffer.h \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Scene.h \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Worker.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/thread \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/std_thread.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/unique_ptr.h \
@@ -341,4 +350,4 @@ CMakeFiles/OffScreenRender.dir/src/main.cpp.obj: \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/atomic \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/atomic_base.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/atomic_lockfree_defines.h \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\ScreenRenderer.h
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\ScreenRenderer.h

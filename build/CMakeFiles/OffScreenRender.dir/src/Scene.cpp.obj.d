@@ -1,8 +1,8 @@
 CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj: \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Scene.cpp \
- D:\Temp\offscreenrender\code\chenyu\OffScreenRender\src\Scene.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/glad/glad.h \
- D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Scene.cpp \
+ D:\Temp\offscreenrender\code\master\OffScreenRender\src\Scene.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/glad/glad.h \
+ D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glad/include/KHR/khrplatform.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stdint.h \
  D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
@@ -66,4 +66,44 @@ CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj: \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cstddef \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uses_allocator.h \
  D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/uses_allocator_args.h \
- D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/tuple
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/tuple \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/thread \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/std_thread.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/iosfwd \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/stringfwd.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/postypes.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cwchar \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/wchar.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/unique_ptr.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/gthr.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/stdlib.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cstdlib \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/stdlib.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/limits.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/limits.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/malloc.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/errno.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/std_abs.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/this_thread_sleep.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/chrono.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ratio \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/cstdint \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/limits \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/ctime \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/time.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/_timeval.h \
+ D:/Code/Tool/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/bits/parse_numbers.h \
+ D:/Code/Tool/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/c++/chrono

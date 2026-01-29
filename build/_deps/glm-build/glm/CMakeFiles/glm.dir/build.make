@@ -52,10 +52,10 @@ RM = D:\Code\Tool\MSYS2\mingw64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender
+CMAKE_SOURCE_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build
+CMAKE_BINARY_DIR = D:\Temp\offscreenrender\code\master\OffScreenRender\build
 
 # Include any dependencies generated for this target.
 include _deps/glm-build/glm/CMakeFiles/glm.dir/depend.make
@@ -73,18 +73,18 @@ _deps/glm-build/glm/CMakeFiles/glm.dir/codegen:
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: _deps/glm-build/glm/CMakeFiles/glm.dir/flags.make
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: _deps/glm-build/glm/CMakeFiles/glm.dir/includes_CXX.rsp
-_deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glm/glm/detail/glm.cpp
+_deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glm/glm/detail/glm.cpp
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj: _deps/glm-build/glm/CMakeFiles/glm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj"
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm && D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj -MF CMakeFiles\glm.dir\detail\glm.cpp.obj.d -o CMakeFiles\glm.dir\detail\glm.cpp.obj -c D:\Temp\offscreenrender\code\chenyu\OffScreenRender\extern\glm\glm\detail\glm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj"
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm && D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj -MF CMakeFiles\glm.dir\detail\glm.cpp.obj.d -o CMakeFiles\glm.dir\detail\glm.cpp.obj -c D:\Temp\offscreenrender\code\master\OffScreenRender\extern\glm\glm\detail\glm.cpp
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/glm.dir/detail/glm.cpp.i"
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm && D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\chenyu\OffScreenRender\extern\glm\glm\detail\glm.cpp > CMakeFiles\glm.dir\detail\glm.cpp.i
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm && D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Temp\offscreenrender\code\master\OffScreenRender\extern\glm\glm\detail\glm.cpp > CMakeFiles\glm.dir\detail\glm.cpp.i
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/glm.dir/detail/glm.cpp.s"
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm && D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\chenyu\OffScreenRender\extern\glm\glm\detail\glm.cpp -o CMakeFiles\glm.dir\detail\glm.cpp.s
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm && D:\Code\Tool\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Temp\offscreenrender\code\master\OffScreenRender\extern\glm\glm\detail\glm.cpp -o CMakeFiles\glm.dir\detail\glm.cpp.s
 
 # Object files for target glm
 glm_OBJECTS = \
@@ -96,19 +96,19 @@ glm_EXTERNAL_OBJECTS =
 _deps/glm-build/glm/libglm.a: _deps/glm-build/glm/CMakeFiles/glm.dir/detail/glm.cpp.obj
 _deps/glm-build/glm/libglm.a: _deps/glm-build/glm/CMakeFiles/glm.dir/build.make
 _deps/glm-build/glm/libglm.a: _deps/glm-build/glm/CMakeFiles/glm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libglm.a"
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean_target.cmake
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\glm.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Temp\offscreenrender\code\master\OffScreenRender\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libglm.a"
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean_target.cmake
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\glm.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 _deps/glm-build/glm/CMakeFiles/glm.dir/build: _deps/glm-build/glm/libglm.a
 .PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/build
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/clean:
-	cd /d D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean.cmake
+	cd /d D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm && $(CMAKE_COMMAND) -P CMakeFiles\glm.dir\cmake_clean.cmake
 .PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/clean
 
 _deps/glm-build/glm/CMakeFiles/glm.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Temp\offscreenrender\code\chenyu\OffScreenRender D:\Temp\offscreenrender\code\chenyu\OffScreenRender\extern\glm\glm D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm D:\Temp\offscreenrender\code\chenyu\OffScreenRender\build\_deps\glm-build\glm\CMakeFiles\glm.dir\DependInfo.cmake "--color=$(COLOR)" glm
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Temp\offscreenrender\code\master\OffScreenRender D:\Temp\offscreenrender\code\master\OffScreenRender\extern\glm\glm D:\Temp\offscreenrender\code\master\OffScreenRender\build D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm D:\Temp\offscreenrender\code\master\OffScreenRender\build\_deps\glm-build\glm\CMakeFiles\glm.dir\DependInfo.cmake "--color=$(COLOR)" glm
 .PHONY : _deps/glm-build/glm/CMakeFiles/glm.dir/depend
 

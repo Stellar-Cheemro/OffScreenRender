@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Framebuffer.cpp" "CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj.d"
-  "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Renderer.cpp" "CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj.d"
-  "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Scene.cpp" "CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj.d"
-  "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/ScreenRenderer.cpp" "CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj.d"
-  "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/Worker.cpp" "CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj.d"
-  "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/src/main.cpp" "CMakeFiles/OffScreenRender.dir/src/main.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/main.cpp.obj.d"
+  "D:/Temp/offscreenrender/code/master/OffScreenRender/src/Framebuffer.cpp" "CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Framebuffer.cpp.obj.d"
+  "D:/Temp/offscreenrender/code/master/OffScreenRender/src/Renderer.cpp" "CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Renderer.cpp.obj.d"
+  "D:/Temp/offscreenrender/code/master/OffScreenRender/src/Scene.cpp" "CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Scene.cpp.obj.d"
+  "D:/Temp/offscreenrender/code/master/OffScreenRender/src/ScreenRenderer.cpp" "CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/ScreenRenderer.cpp.obj.d"
+  "D:/Temp/offscreenrender/code/master/OffScreenRender/src/Worker.cpp" "CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/Worker.cpp.obj.d"
+  "D:/Temp/offscreenrender/code/master/OffScreenRender/src/main.cpp" "CMakeFiles/OffScreenRender.dir/src/main.cpp.obj" "gcc" "CMakeFiles/OffScreenRender.dir/src/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

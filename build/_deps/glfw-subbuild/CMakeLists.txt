@@ -20,8 +20,8 @@ project(glfw-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(glfw-populate
                      "UPDATE_DISCONNECTED" "False" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR"
-                    SOURCE_DIR          "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/extern/glfw"
-                    BINARY_DIR          "D:/Temp/offscreenrender/code/chenyu/OffScreenRender/build/_deps/glfw-build"
+                    SOURCE_DIR          "D:/Temp/offscreenrender/code/master/OffScreenRender/extern/glfw"
+                    BINARY_DIR          "D:/Temp/offscreenrender/code/master/OffScreenRender/build/_deps/glfw-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

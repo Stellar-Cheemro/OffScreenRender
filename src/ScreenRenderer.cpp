@@ -18,7 +18,7 @@ void ScreenRenderer::Init()
     screenShader->setInt("screenTexture", 0);
 
     float quadVertices[] = {
-        // positions   // texCoords
+        // 位置        // 纹理坐标
         -1.0f, 1.0f, 0.0f, 1.0f,
         -1.0f, -1.0f, 0.0f, 0.0f,
         1.0f, -1.0f, 1.0f, 0.0f,
