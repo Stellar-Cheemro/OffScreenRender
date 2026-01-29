@@ -127,7 +127,12 @@ int main(int argc, char** argv)
         // 绘制 UI 窗口
         ImGui::SetNextWindowSize(ImVec2(1000, 250), ImGuiCond_FirstUseEver);
         ImGui::Begin(u8"性能测试控制面板");
-        ImGui::Text(u8"平均帧率FPS: %.1f", lastFps);
+        
+        // 分别显示渲染帧率和 UI 帧率
+        double renderFps = useMultiThread ? worker->GetFPS() : lastFps;
+        
+        ImGui::Text(u8"UI 更新率 (UI FPS): %.1f", lastFps);
+        ImGui::Text(u8"画面更新率 (Render FPS): %.1f", renderFps);
         ImGui::Text(u8"平均每帧用时: %.3f ms", lastAvgMs);
         
         ImGui::Separator();
@@ -146,17 +151,6 @@ int main(int argc, char** argv)
         ImGui::Separator();
         ImGui::SliderInt(u8"主线程UI界面负载", &cpuLoad, 0, 1000);
         ImGui::SliderInt(u8"渲染线程负载", &renderLoad, 0, 1000);
-
-        // ImGui::Separator();
-        // ImGui::TextWrapped(
-        //     u8"使用说明 (Instructions):\n"
-        //     u8"1. 增加 [主线程负载] (CPU).\n"
-        //     u8"2. 增加 [渲染负载] (Render).\n"
-        //     u8"   (注: 为避免高端显卡导致测试失效，现已改为模拟耗时)\n"
-        //     u8"3. 对比单/多线程模式 FPS.\n"
-        //     u8"   - 单线程: 耗时 = 逻辑 + 渲染 (FPS低)\n"
-        //     u8"   - 多线程: 耗时 = Max(逻辑, 渲染) (FPS高)\n"
-        // );
 
         ImGui::End();
 

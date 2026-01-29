@@ -132,6 +132,9 @@ void Worker::ThreadMain()
 
     // 渲染循环
     using clock = std::chrono::high_resolution_clock;
+    auto lastReport = clock::now();
+    int frames = 0;
+
     while (running)
     {
         // 更新负载
@@ -164,6 +167,17 @@ void Worker::ThreadMain()
         // 交换前后缓冲
         std::swap(frontFbo, backFbo);
         frontTexture.store(frontFbo->GetTextureID());
+
+        // 计算渲染帧率
+        frames++;
+        auto now = clock::now();
+        std::chrono::duration<double> elapsed = now - lastReport;
+        if (elapsed.count() >= 1.0)
+        {
+            fps.store((double)frames / elapsed.count());
+            frames = 0;
+            lastReport = now;
+        }
 
         // 无休眠全速运行
     }
