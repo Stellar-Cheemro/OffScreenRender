@@ -6,9 +6,24 @@ ScreenRenderer::ScreenRenderer() : quadVAO(0), quadVBO(0), screenShader(nullptr)
 
 ScreenRenderer::~ScreenRenderer()
 {
-    delete screenShader;
-    glDeleteVertexArrays(1, &quadVAO);
-    glDeleteBuffers(1, &quadVBO);
+    // 添加空指针检查，避免重复释放
+    if (screenShader)
+    {
+        delete screenShader;
+        screenShader = nullptr;
+    }
+
+    // 检查VAO和VBO是否有效
+    if (quadVAO != 0)
+    {
+        glDeleteVertexArrays(1, &quadVAO);
+        quadVAO = 0;
+    }
+    if (quadVBO != 0)
+    {
+        glDeleteBuffers(1, &quadVBO);
+        quadVBO = 0;
+    }
 }
 
 void ScreenRenderer::Init()

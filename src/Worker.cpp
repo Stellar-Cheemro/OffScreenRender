@@ -41,16 +41,39 @@ void Worker::Stop()
         glfwDestroyWindow(workerWindow);
         workerWindow = nullptr;
     }
-    // delete framebuffers and scene
-    delete fboA;
-    delete fboB;
-    delete scene;
-    // delete any remaining fence
-    GLsync fence = latestFence.load();
+    // 先处理fence，避免在释放其他资源时访问
+    GLsync fence = latestFence.exchange(nullptr);
     if (fence)
     {
-        glDeleteSync(fence);
-        latestFence.store(nullptr);
+        // 确保在正确的上下文环境中操作GL资源
+        if (workerWindow)
+        {
+            glfwMakeContextCurrent(workerWindow);
+            glDeleteSync(fence);
+            glfwMakeContextCurrent(nullptr);
+        }
+        else
+        {
+            // 如果上下文已经失效，直接删除同步对象
+            glDeleteSync(fence);
+        }
+    }
+
+    // 删除framebuffers和scene，检查空指针避免重复释放
+    if (fboA)
+    {
+        delete fboA;
+        fboA = nullptr;
+    }
+    if (fboB)
+    {
+        delete fboB;
+        fboB = nullptr;
+    }
+    if (scene)
+    {
+        delete scene;
+        scene = nullptr;
     }
 }
 

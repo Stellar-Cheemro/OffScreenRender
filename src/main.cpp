@@ -14,21 +14,37 @@ const unsigned int SCR_HEIGHT = 1080;
 
 Renderer *renderer = nullptr;
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     bool singleMode = false;
     int cpuLoad = 0; // arbitrary load units
-    for (int i = 1; i < argc; ++i) if (std::string(argv[i]) == "--single") singleMode = true;
+    for (int i = 1; i < argc; ++i)
+        if (std::string(argv[i]) == "--single")
+            singleMode = true;
     for (int i = 1; i < argc; ++i)
     {
         std::string s = argv[i];
         if (s.rfind("--cpu-load=", 0) == 0)
         {
-            try { cpuLoad = std::stoi(s.substr(11)); } catch(...) { cpuLoad = 0; }
+            try
+            {
+                cpuLoad = std::stoi(s.substr(11));
+            }
+            catch (...)
+            {
+                cpuLoad = 0;
+            }
         }
         else if (s == "--cpu-load" && i + 1 < argc)
         {
-            try { cpuLoad = std::stoi(argv[++i]); } catch(...) { cpuLoad = 0; }
+            try
+            {
+                cpuLoad = std::stoi(argv[++i]);
+            }
+            catch (...)
+            {
+                cpuLoad = 0;
+            }
         }
     }
     // 1. 初始化 GLFW
@@ -56,34 +72,40 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    const GLubyte* glVersion = glGetString(GL_VERSION);
-    if (glVersion) {
-        std::cout << "GLAD initialized. OpenGL Version: " << reinterpret_cast<const char*>(glVersion) << std::endl;
-    } else {
+    const GLubyte *glVersion = glGetString(GL_VERSION);
+    if (glVersion)
+    {
+        std::cout << "GLAD initialized. OpenGL Version: " << reinterpret_cast<const char *>(glVersion) << std::endl;
+    }
+    else
+    {
         std::cout << "GLAD initialized. OpenGL Version: NULL" << std::endl;
     }
 
     // 5. Initialize based on mode
-    Renderer* singleRenderer = nullptr;
-    Worker* worker = nullptr;
-    ScreenRenderer* screen = nullptr;
+    Renderer *singleRenderer = nullptr;
+    Worker *worker = nullptr;
+    ScreenRenderer *screen = nullptr;
 
-    if (singleMode) {
+    if (singleMode)
+    {
         singleRenderer = new Renderer(SCR_WIDTH, SCR_HEIGHT);
         singleRenderer->Init();
         std::cout << "Single-thread renderer initialized." << std::endl;
-    } else {
+    }
+    else
+    {
         std::cout << "Creating worker object..." << std::endl;
         worker = new Worker(window, SCR_WIDTH, SCR_HEIGHT);
-        
+
         std::cout << "Starting worker thread..." << std::endl;
         worker->Start();
-        
+
         std::cout << "Creating ScreenRenderer..." << std::endl;
         screen = new ScreenRenderer();
         std::cout << "Initializing ScreenRenderer..." << std::endl;
         screen->Init();
-        
+
         std::cout << "Initialization complete. Starting render loop..." << std::endl;
     }
 
@@ -94,8 +116,10 @@ int main(int argc, char** argv)
     double accumFrameMs = 0.0;
 
     // helper: simulate CPU-heavy work on main thread
-    auto DoHeavyWork = [](int units){
-        if (units <= 0) return;
+    auto DoHeavyWork = [](int units)
+    {
+        if (units <= 0)
+            return;
         volatile double acc = 0.0;
         int loops = units * 10000;
         for (int i = 0; i < loops; ++i)
@@ -110,14 +134,16 @@ int main(int argc, char** argv)
         if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
             glfwSetWindowShouldClose(window, true);
 
-
         // 计时并执行一帧：单线程直接渲染，多线程绘制 worker 的纹理
         auto t0 = clock::now();
         // simulate main-thread CPU work (UI, physics, etc.)
         DoHeavyWork(cpuLoad);
-        if (singleMode) {
+        if (singleMode)
+        {
             singleRenderer->Render();
-        } else {
+        }
+        else
+        {
             unsigned int tex = worker->TryGetReadyTexture();
             static unsigned int lastTex = 0;
             if (tex)
@@ -155,9 +181,16 @@ int main(int argc, char** argv)
     }
 
     // 7. 清理资源
-    if (singleMode) {
+    if (singleMode)
+    {
         delete singleRenderer;
-    } else {
+        if (screen)
+        {
+            delete screen;
+        }
+    }
+    else
+    {
         worker->Stop();
         delete worker;
         delete screen;

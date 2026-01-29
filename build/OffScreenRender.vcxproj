@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|win32">
+      <Configuration>Release</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{001436EF-1014-39A3-BD0C-A059547C0785}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>win32</Platform>
+    <ProjectName>OffScreenRender</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\31009\Desktop\OffScreenRender\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">OffScreenRender.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">OffScreenRender</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\31009\Desktop\OffScreenRender\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">OffScreenRender.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|win32'">OffScreenRender</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\31009\Desktop\OffScreenRender\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">OffScreenRender.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">OffScreenRender</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\31009\Desktop\OffScreenRender\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">OffScreenRender.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">OffScreenRender</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/31009/Desktop/OffScreenRender/build/Debug/shaders
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E copy_directory C:/Users/31009/Desktop/OffScreenRender/shaders C:/Users/31009/Desktop/OffScreenRender/build/Debug/shaders
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\glfw-build\src\Debug\glfw3.lib;Debug\glad.lib;_deps\glm-build\glm\Debug\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/31009/Desktop/OffScreenRender/build/Debug/OffScreenRender.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/31009/Desktop/OffScreenRender/build/Debug/OffScreenRender.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/31009/Desktop/OffScreenRender/build/Release/shaders
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E copy_directory C:/Users/31009/Desktop/OffScreenRender/shaders C:/Users/31009/Desktop/OffScreenRender/build/Release/shaders
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\glfw-build\src\Release\glfw3.lib;Release\glad.lib;_deps\glm-build\glm\Release\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/31009/Desktop/OffScreenRender/build/Release/OffScreenRender.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/31009/Desktop/OffScreenRender/build/Release/OffScreenRender.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/31009/Desktop/OffScreenRender/build/MinSizeRel/shaders
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E copy_directory C:/Users/31009/Desktop/OffScreenRender/shaders C:/Users/31009/Desktop/OffScreenRender/build/MinSizeRel/shaders
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\glfw-build\src\MinSizeRel\glfw3.lib;MinSizeRel\glad.lib;_deps\glm-build\glm\MinSizeRel\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/31009/Desktop/OffScreenRender/build/MinSizeRel/OffScreenRender.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/31009/Desktop/OffScreenRender/build/MinSizeRel/OffScreenRender.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\31009\Desktop\OffScreenRender\src;C:\Users\31009\Desktop\OffScreenRender\extern\glfw\include;C:\Users\31009\Desktop\OffScreenRender\extern\glad\include;C:\Users\31009\Desktop\OffScreenRender\extern\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\msys64\mingw64\bin\cmake.exe -E make_directory C:/Users/31009/Desktop/OffScreenRender/build/RelWithDebInfo/shaders
+if %errorlevel% neq 0 goto :cmEnd
+C:\msys64\mingw64\bin\cmake.exe -E copy_directory C:/Users/31009/Desktop/OffScreenRender/shaders C:/Users/31009/Desktop/OffScreenRender/build/RelWithDebInfo/shaders
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>_deps\glfw-build\src\RelWithDebInfo\glfw3.lib;RelWithDebInfo\glad.lib;_deps\glm-build\glm\RelWithDebInfo\glm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <DataExecutionPrevention></DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
+      <ImportLibrary>C:/Users/31009/Desktop/OffScreenRender/build/RelWithDebInfo/OffScreenRender.lib</ImportLibrary>
+      <LinkErrorReporting></LinkErrorReporting>
+      <ProgramDataBaseFile>C:/Users/31009/Desktop/OffScreenRender/build/RelWithDebInfo/OffScreenRender.pdb</ProgramDataBaseFile>
+      <RandomizedBaseAddress></RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\31009\Desktop\OffScreenRender\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule C:/Users/31009/Desktop/OffScreenRender/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+C:\msys64\mingw64\bin\cmake.exe -SC:/Users/31009/Desktop/OffScreenRender -BC:/Users/31009/Desktop/OffScreenRender/build --check-stamp-file C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCXXCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeRCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\ExternalProject\shared_internal_commands.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent\CMakeLists.cmake.in;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule C:/Users/31009/Desktop/OffScreenRender/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
+C:\msys64\mingw64\bin\cmake.exe -SC:/Users/31009/Desktop/OffScreenRender -BC:/Users/31009/Desktop/OffScreenRender/build --check-stamp-file C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCXXCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeRCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\ExternalProject\shared_internal_commands.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent\CMakeLists.cmake.in;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule C:/Users/31009/Desktop/OffScreenRender/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
+C:\msys64\mingw64\bin\cmake.exe -SC:/Users/31009/Desktop/OffScreenRender -BC:/Users/31009/Desktop/OffScreenRender/build --check-stamp-file C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCXXCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeRCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\ExternalProject\shared_internal_commands.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent\CMakeLists.cmake.in;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule C:/Users/31009/Desktop/OffScreenRender/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
+C:\msys64\mingw64\bin\cmake.exe -SC:/Users/31009/Desktop/OffScreenRender -BC:/Users/31009/Desktop/OffScreenRender/build --check-stamp-file C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeCXXCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeRCCompiler.cmake;C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\4.2.0\CMakeSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCXXInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeCommonLanguageInclude.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeGenericSystem.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeInitializeConfigs.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeLanguageInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeRCInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\CMakeSystemSpecificInitialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Compiler\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\ExternalProject\shared_internal_commands.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent.cmake;C:\msys64\mingw64\share\cmake\Modules\FetchContent\CMakeLists.cmake.in;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Linker\MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Linker\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-Initialize.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-C.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC-CXX.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows-MSVC.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\Windows.cmake;C:\msys64\mingw64\share\cmake\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\31009\Desktop\OffScreenRender\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\31009\Desktop\OffScreenRender\src\Framebuffer.cpp" />
+    <ClCompile Include="C:\Users\31009\Desktop\OffScreenRender\src\Renderer.cpp" />
+    <ClCompile Include="C:\Users\31009\Desktop\OffScreenRender\src\Scene.cpp" />
+    <ClCompile Include="C:\Users\31009\Desktop\OffScreenRender\src\ScreenRenderer.cpp" />
+    <ClCompile Include="C:\Users\31009\Desktop\OffScreenRender\src\Worker.cpp" />
+    <ClCompile Include="C:\Users\31009\Desktop\OffScreenRender\src\main.cpp" />
+    <ClInclude Include="C:\Users\31009\Desktop\OffScreenRender\src\Framebuffer.h" />
+    <ClInclude Include="C:\Users\31009\Desktop\OffScreenRender\src\Renderer.h" />
+    <ClInclude Include="C:\Users\31009\Desktop\OffScreenRender\src\Scene.h" />
+    <ClInclude Include="C:\Users\31009\Desktop\OffScreenRender\src\ScreenRenderer.h" />
+    <ClInclude Include="C:\Users\31009\Desktop\OffScreenRender\src\Shader.h" />
+    <ClInclude Include="C:\Users\31009\Desktop\OffScreenRender\src\Worker.h" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\31009\Desktop\OffScreenRender\build\ZERO_CHECK.vcxproj">
+      <Project>{F0C88E6A-6840-35BE-B633-B4DDAA527FDE}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\31009\Desktop\OffScreenRender\build\glad.vcxproj">
+      <Project>{F8B61A49-2DBD-3C94-A57D-6A8878BF2571}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\31009\Desktop\OffScreenRender\build\_deps\glfw-build\src\glfw.vcxproj">
+      <Project>{8537E8E7-ECE5-3435-8FD7-FB683F298C17}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\31009\Desktop\OffScreenRender\build\_deps\glm-build\glm\glm.vcxproj">
+      <Project>{490EC813-D991-3E8D-8FA6-801724E17B2D}</Project>
+      <Name>glm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

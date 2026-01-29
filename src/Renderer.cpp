@@ -14,12 +14,39 @@ Renderer::Renderer(int width, int height) : screenWidth(width), screenHeight(hei
 
 Renderer::~Renderer()
 {
-    delete sceneShader;
-    delete screenShader;
-    delete fbo;
-    delete scene;
-    glDeleteVertexArrays(1, &quadVAO);
-    glDeleteBuffers(1, &quadVBO);
+    // 添加空指针检查，避免重复释放
+    if (sceneShader)
+    {
+        delete sceneShader;
+        sceneShader = nullptr;
+    }
+    if (screenShader)
+    {
+        delete screenShader;
+        screenShader = nullptr;
+    }
+    if (fbo)
+    {
+        delete fbo;
+        fbo = nullptr;
+    }
+    if (scene)
+    {
+        delete scene;
+        scene = nullptr;
+    }
+
+    // 检查VAO和VBO是否有效
+    if (quadVAO != 0)
+    {
+        glDeleteVertexArrays(1, &quadVAO);
+        quadVAO = 0;
+    }
+    if (quadVBO != 0)
+    {
+        glDeleteBuffers(1, &quadVBO);
+        quadVBO = 0;
+    }
 }
 
 void Renderer::Init()
