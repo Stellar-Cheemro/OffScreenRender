@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -23,7 +23,7 @@ public:
     unsigned int GetReadyTexture();
     // 非阻塞获取就绪纹理；若未就绪返回 0
     unsigned int TryGetReadyTexture();
-    
+
     // 获取渲染线程的实时 FPS
     double GetFPS() const { return fps.load(); }
 
@@ -47,7 +47,7 @@ private:
     std::atomic<unsigned int> frontTexture;
     std::atomic<GLsync> latestFence;
     std::atomic<int> targetWorkload{0};
-    
+
     // FPS 计算
     std::atomic<double> fps{0.0};
 };

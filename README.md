@@ -87,27 +87,63 @@ OffScreenRender/
 ## 4. 核心原理
 
 ### 架构对比
-1.  **单线程模式 (Serial Execution)**:
-    *   `Frame Time = Logic Time + Render Time`
-    *   逻辑更新和渲染绘制在同一个线程按顺序执行。任何一方变慢都会直接拖慢帧率。
-    
-2.  **多线程模式 (Parallel Execution)**:
-    *   `Frame Time ≈ Max(Logic Time, Render Time) + Overhead`
-    *   **Main Thread**: 处理窗口消息、UI Interaction、逻辑更新。
-    *   **Worker Thread**: 专职处理 OpenGL 绘制命令。
-    *   两者并行工作，极大提升了硬件利用率。
+    **项目概述**
 
-### 关键技术点
+    - **名称**: OffScreenRender — 多线程离屏渲染演示（C++ / OpenGL / ImGui）
+    - **目的**: 演示将渲染剥离到后台线程（Worker）与主逻辑/UI 并行执行，从而改善 UI 响应和整体帧率的效果。
 
-1.  **OpenGL 上下文共享 (Context Sharing)**:
-    Worker 线程创建窗口时通过 `glfwCreateWindow` 的最后一个参数共享主窗口的上下文资源（纹理、Buffer），使得 Worker 绘制的纹理可以直接被主线程读取和显示。
+    **快速开始**
 
-2.  **双缓冲 + 帧缓冲区 (FBO)**:
-    Worker 不直接绘制到屏幕（Back Buffer），而是绘制到自定义的 FBO 纹理中。使用了双缓冲机制（Front/Back FBO），Worker 绘制 Back FBO，完成后交换给 Front，主线程只读取 Front FBO 进行上屏。
+    - **依赖**: CMake 3.15+、支持 C++17 的编译器。第三方库（GLFW、GLAD、GLM、ImGui）已包含在 [extern/](extern/)。
+    - **构建 (命令行)**:
 
-3.  **同步机制 (Synchronization)**:
-    *   **GL Fence (`glFenceSync`)**: 为了防止主线程在 Worker 还没画完时就去读取纹理（导致画面撕裂或错乱），使用 OpenGL 同步栅栏。Worker 提交绘制后插入 Fence，主线程在绘制前检查 Fence 是否完成 (`glWaitSync` / `glClientWaitSync`)。
-    *   **原子变量 (`std::atomic`)**: 线程间通信（如传递纹理ID、停止标志）使用 C++ 原子变量确保线程安全。
+      ```bash
+      mkdir build
+      cd build
+      cmake -S .. -B .
+      cmake --build . --config Debug
+      ```
 
-4.  **纹理上屏 (Texture Blit)**:
-    主线程实际上不进行复杂的场景绘制，它唯一的渲染任务是画一个全屏的四边形，并将 Worker 产出的纹理贴上去。这由 `ScreenRenderer` 类完成。
+    - **使用 Visual Studio**: 打开 [build/OffScreenRender.sln](build/OffScreenRender.sln)，选择 Debug/Release 配置并生成。
+    - **运行**: 生成后在 Windows 上通常可执行文件位于 [build/Debug/OffScreenRender.exe](build/Debug/OffScreenRender.exe)（或 Release 配置的相应目录）。
+
+    **主要功能**
+
+    - **单/多线程切换**: 通过 UI 切换主线程绘制与后台 Worker 绘制。
+    - **负载模拟**: 可调节主线程（CPU）与渲染线程（Render）负载，用于比较两种架构下的表现。
+    - **离屏渲染 + 同步**: Worker 将场景渲染到 FBO，主线程通过上下文共享和同步机制读取并显示纹理。
+
+    **代码结构（要点）**
+
+    - **入口与 UI**: [src/main.cpp](src/main.cpp) — 主循环、ImGui 控制面板、模式切换与负载模拟。
+    - **Worker 线程**: [src/Worker.cpp](src/Worker.cpp) / [src/Worker.h](src/Worker.h) — 后台渲染循环、上下文管理、同步（fence/atomic）。
+    - **场景与渲染**: [src/Scene.cpp](src/Scene.cpp) / [src/Scene.h](src/Scene.h) 和 [src/Renderer.cpp](src/Renderer.cpp) / [src/Renderer.h](src/Renderer.h)。
+    - **Framebuffer / 屏幕显示**: [src/Framebuffer.cpp](src/Framebuffer.cpp) / [src/ScreenRenderer.cpp](src/ScreenRenderer.cpp)。
+    - **着色器**: GLSL 文件位于 [shaders/](shaders/)（scene.vert/frag, screen.vert/frag）。
+
+    **构建/调试建议**
+
+    - 在 Windows 上推荐使用 Visual Studio 打开已有的 solution（[build/OffScreenRender.sln](build/OffScreenRender.sln)）。
+    - 若通过命令行构建，指定 `--config Debug` 或 `--config Release` 以选择构建类型。
+    - 若遇到 OpenGL 函数加载或上下文问题，确保系统驱动支持所需的 OpenGL 版本并使用内置的 GLAD（位于 [extern/glad/](extern/glad/)）。
+
+    **运行与测试流程建议**
+
+    - 启动程序后在 UI 中切换到“单线程”模式，并逐步增加“主线程负载”滑块，观察 FPS 和 UI 响应。
+    - 在同一负载下切换到“多线程”模式，期待看到 UI 更流畅且总体帧率改善。
+
+    **代码定位与扩展点**
+
+    - 修改 UI 或负载模拟: 编辑 [src/main.cpp](src/main.cpp)。
+    - 更改场景或渲染逻辑: 编辑 [src/Scene.cpp](src/Scene.cpp) 和 [src/Renderer.cpp](src/Renderer.cpp)。
+    - 调整同步或双缓冲实现: 查看 [src/Worker.cpp](src/Worker.cpp) 与 [src/Framebuffer.cpp](src/Framebuffer.cpp)。
+
+    **故障排查小贴士**
+
+    - 程序无法启动/崩溃: 确认构建配置（Debug/Release）与可执行路径，并检查运行时控制台输出。
+    - 黑屏但程序未崩溃: 检查 shaders 是否被正确加载（路径为 [shaders/](shaders/)），并确认驱动支持的 OpenGL 版本。
+    - 纹理/渲染不同步: 检查 fence 使用与上下文共享是否正确（相关代码在 [src/Worker.cpp](src/Worker.cpp)）。
+
+    **许可与致谢**
+
+    - 本项目为学习/演示用途。所用第三方库遵循各自开源许可（GLFW/GLM/ImGui/GLAD）。
