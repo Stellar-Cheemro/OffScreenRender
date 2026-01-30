@@ -15,6 +15,7 @@ public:
     void Init();
     void Render();
     void Resize(int width, int height);
+    void SetSceneWorkload(int load);
 
 private:
     int screenWidth, screenHeight;

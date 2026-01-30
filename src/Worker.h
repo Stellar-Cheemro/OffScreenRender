@@ -16,12 +16,16 @@ public:
 
     void Start();
     void Stop();
+    void SetSceneWorkload(int load) { targetWorkload.store(load); }
 
     unsigned int GetTextureID() const;
-    // Wait for GPU work to finish and return the latest front texture ID
+    // 等待 GPU 完成工作并返回最新的纹理 ID
     unsigned int GetReadyTexture();
-    // Try to get a ready texture without blocking; returns 0 if none ready
+    // 非阻塞获取就绪纹理；若未就绪返回 0
     unsigned int TryGetReadyTexture();
+    
+    // 获取渲染线程的实时 FPS
+    double GetFPS() const { return fps.load(); }
 
 private:
     void ThreadMain();
@@ -30,7 +34,7 @@ private:
     GLFWwindow *workerWindow;
     int width, height;
 
-    // double-buffered FBOs
+    // 双缓冲 FBO
     Framebuffer *fboA;
     Framebuffer *fboB;
     Framebuffer *frontFbo;
@@ -39,7 +43,11 @@ private:
 
     std::thread workerThread;
     std::atomic<bool> running;
-    // synchronization primitives exposed to main thread
+    // 向主线程暴露的同步原语
     std::atomic<unsigned int> frontTexture;
     std::atomic<GLsync> latestFence;
+    std::atomic<int> targetWorkload{0};
+    
+    // FPS 计算
+    std::atomic<double> fps{0.0};
 };

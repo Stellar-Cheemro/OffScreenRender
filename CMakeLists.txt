@@ -26,15 +26,24 @@ set(GLM_TEST_ENABLE OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(glm)
 
 # --- GLAD ---
-# 注意: GLAD 是一个生成器。我们期望用户已经生成了文件
-# 并将它们放置在 extern/glad/ 中
-# 结构:
-# extern/glad/include/glad/glad.h
-# extern/glad/include/KHR/khrplatform.h
-# extern/glad/src/glad.c
-
 add_library(glad STATIC extern/glad/src/glad.c)
 target_include_directories(glad PUBLIC extern/glad/include)
+
+# --- ImGui ---
+set(IMGUI_DIR ${CMAKE_SOURCE_DIR}/extern/imgui)
+file(GLOB IMGUI_SOURCES
+    ${IMGUI_DIR}/imgui.cpp
+    ${IMGUI_DIR}/imgui_demo.cpp
+    ${IMGUI_DIR}/imgui_draw.cpp
+    ${IMGUI_DIR}/imgui_tables.cpp
+    ${IMGUI_DIR}/imgui_widgets.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
+)
+add_library(imgui STATIC ${IMGUI_SOURCES})
+target_include_directories(imgui PUBLIC ${IMGUI_DIR} ${IMGUI_DIR}/backends)
+target_link_libraries(imgui PRIVATE glfw glad)
+target_compile_definitions(imgui PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLAD)
 
 # --- 主项目 ---
 file(GLOB_RECURSE SOURCES "src/*.cpp")
@@ -43,7 +52,7 @@ file(GLOB_RECURSE HEADERS "src/*.h")
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 target_include_directories(${PROJECT_NAME} PRIVATE src)
-target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad glm::glm)
+target_link_libraries(${PROJECT_NAME} PRIVATE glfw glad glm::glm imgui)
 
 # 将着色器复制到构建目录
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD

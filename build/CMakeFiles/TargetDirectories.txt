@@ -1,9 +1,0 @@
-C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/glad.dir
-C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/OffScreenRender.dir
-C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/31009/Desktop/OffScreenRender/build/CMakeFiles/ZERO_CHECK.dir
-C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-build/CMakeFiles/ALL_BUILD.dir
-C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-build/src/CMakeFiles/glfw.dir
-C:/Users/31009/Desktop/OffScreenRender/build/_deps/glfw-build/src/CMakeFiles/update_mappings.dir
-C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-build/CMakeFiles/ALL_BUILD.dir
-C:/Users/31009/Desktop/OffScreenRender/build/_deps/glm-build/glm/CMakeFiles/glm.dir

@@ -70,6 +70,10 @@ void Renderer::Init()
     InitQuad();
 }
 
+void Renderer::SetSceneWorkload(int load) {
+    if (scene) scene->SetWorkload(load);
+}
+
 void Renderer::InitQuad()
 {
     float quadVertices[] = {// 标准化设备坐标中填充整个屏幕的四边形的顶点属性。
