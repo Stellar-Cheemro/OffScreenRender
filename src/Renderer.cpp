@@ -98,7 +98,7 @@ void Renderer::Render()
     fbo->Unbind();
 
     // --- 第二阶段：屏幕后处理 ---
-    // 可以在这里禁用深度测试，这对于绘制全屏四边形往往是好的
+    // 禁用深度测试方便绘制全屏四边形
     glDisable(GL_DEPTH_TEST);
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // 纯白背景清屏（实际上会被四边形覆盖）
     glClear(GL_COLOR_BUFFER_BIT);
