@@ -145,7 +145,7 @@ int main(int argc, char** argv)
         ImGui::NewFrame();
 
         // 绘制 UI 窗口
-        ImGui::SetNextWindowSize(ImVec2(1000, 350), ImGuiCond_FirstUseEver);
+        ImGui::SetNextWindowSize(ImVec2(800, 250), ImGuiCond_FirstUseEver);
         ImGui::Begin(u8"性能测试控制面板");
         
         // 分别显示渲染帧率和 UI 帧率
