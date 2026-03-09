@@ -7,10 +7,21 @@
 #include <iostream>
 #include <glm/glm.hpp>
 
+/**
+ * @brief GLSL 着色器编译与管理类
+ * 
+ * 负责读取、编译、链接顶点和片段着色器，并提供 Uniform 设置接口。
+ */
 class Shader {
 public:
     unsigned int ID;
 
+    /**
+     * @brief 构造函数：读取并编译着色器
+     * 
+     * @param vertexPath 顶点着色器文件路径
+     * @param fragmentPath 片段着色器文件路径
+     */
     Shader(const char* vertexPath, const char* fragmentPath) {
         std::string vertexCode;
         std::string fragmentCode;

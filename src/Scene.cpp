@@ -2,6 +2,11 @@
 #include <thread>
 #include <chrono>
 
+/**
+ * @brief 构造函数：初始化场景数据
+ * 
+ * @note 定义立方体顶点数据，并配置 VAO/VBO。
+ */
 Scene::Scene() {
     float cubeVertices[] = {
         // 位置               // 纹理坐标
@@ -67,6 +72,12 @@ Scene::~Scene() {
     glDeleteBuffers(1, &cubeVBO);
 }
 
+/**
+ * @brief 绘制 3D 场景
+ * 
+ * @note 如果启用了模拟负载 (simulateWorkload)，
+ *       会在此处执行 sleep 来模拟 GPU 渲染耗时。
+ */
 void Scene::Draw() {
     glBindVertexArray(cubeVAO);
     glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -76,7 +87,7 @@ void Scene::Draw() {
     // 这里使用 sleep 来模拟"驱动程序提交命令耗时"或者"GPU处理阻塞"。
     // 1个单位 workload = 100微秒 (0.1ms)
     // 100个单位 = 10ms
-    if (workload > 0) {
+    if (workload > 0 && simulateWorkload) {
         // 使用 busy loop 可能比 sleep 更稳定，避免操作系统调度带来的额外波动
         // 但 sleep 对多线程演示更直观（让出 CPU 时间片）
         // 这里为了让单线程确确实实变卡，我们用 sleep

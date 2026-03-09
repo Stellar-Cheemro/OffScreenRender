@@ -16,6 +16,7 @@ public:
     void Render();
     void Resize(int width, int height);
     void SetSceneWorkload(int load);
+    void SetSimulateWorkload(bool simulate);
 
 private:
     int screenWidth, screenHeight;

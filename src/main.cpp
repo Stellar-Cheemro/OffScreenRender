@@ -18,10 +18,24 @@ const unsigned int SCR_HEIGHT = 1080;
 
 Renderer *globalSingleRenderer = nullptr;
 
+/**
+ * @brief 应用程序主入口，包含主循环、事件处理和UI绘制
+ * 
+ * @param argc 命令行参数数量
+ * @param argv 命令行参数数组
+ * @return int 程序退出码
+ * 
+ * @note 此函数负责：
+ *       1. 初始化 GLFW, GLAD, ImGui。
+ *       2. 创建窗口和渲染上下文。
+ *       3. 管理单线程/多线程渲染模式的切换。
+ *       4. 执行主线程的 CPU 负载模拟。
+ */
 int main(int argc, char** argv)
 {
     // 默认设置
     bool useMultiThread = false;
+    bool simulateWorkload = true;
     int cpuLoad = 0;
     int renderLoad = 0;
 
@@ -97,7 +111,13 @@ int main(int argc, char** argv)
     double lastFps = 0.0;
     double lastAvgMs = 0.0;
 
-    // 辅助函数：模拟主线程 CPU 密集型任务
+    /**
+     * @brief 模拟主线程 CPU 密集型任务
+     * 
+     * @param units 负载单位 (每单位约 10000 次开方运算)
+     * 
+     * @note 通过 volatile 避免编译器优循环，确保真实的 CPU 占用。
+     */
     auto DoHeavyWork = [](int units){
         if (units <= 0) return;
         volatile double acc = 0.0;
@@ -125,7 +145,7 @@ int main(int argc, char** argv)
         ImGui::NewFrame();
 
         // 绘制 UI 窗口
-        ImGui::SetNextWindowSize(ImVec2(1000, 250), ImGuiCond_FirstUseEver);
+        ImGui::SetNextWindowSize(ImVec2(1000, 350), ImGuiCond_FirstUseEver);
         ImGui::Begin(u8"性能测试控制面板");
         
         // 分别显示渲染帧率和 UI 帧率
@@ -149,8 +169,14 @@ int main(int argc, char** argv)
         }
 
         ImGui::Separator();
-        ImGui::SliderInt(u8"主线程UI界面负载", &cpuLoad, 0, 1000);
-        ImGui::SliderInt(u8"渲染线程负载", &renderLoad, 0, 1000);
+        // 渲染模式选择：模拟繁重渲染或真实渲染
+        if (ImGui::RadioButton(u8"模拟繁重渲染", simulateWorkload)) simulateWorkload = true;
+        ImGui::SameLine();
+        if (ImGui::RadioButton(u8"真实渲染", !simulateWorkload)) simulateWorkload = false;
+
+        ImGui::Separator();
+        ImGui::SliderInt(u8"主线程UI界面负载 (Main Thread CPU Load)", &cpuLoad, 0, 1000);
+        ImGui::SliderInt(u8"渲染线程负载 (Render Thread GPU Load)", &renderLoad, 0, 1000);
 
         ImGui::End();
 
@@ -168,7 +194,10 @@ int main(int argc, char** argv)
 
         // 更新负载设置
         singleRenderer->SetSceneWorkload(renderLoad);
+        singleRenderer->SetSimulateWorkload(simulateWorkload);
+        
         worker->SetSceneWorkload(renderLoad);
+        worker->SetSimulateWorkload(simulateWorkload);
 
         // 渲染主逻辑
         auto t0 = clock::now();
@@ -238,7 +267,15 @@ int main(int argc, char** argv)
     return 0;
 }
 
-// 窗口大小改变回调函数
+/**
+ * @brief 窗口尺寸变化回调函数
+ * 
+ * @param window 发生变化的窗口指针
+ * @param width 新的窗口宽度 (px)
+ * @param height 新的窗口高度 (px)
+ * 
+ * @note 当单线程渲染器存在时，会自动调整其视口(Viewport)大小。
+ */
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
     if (globalSingleRenderer)

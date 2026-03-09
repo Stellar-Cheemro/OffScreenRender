@@ -1,5 +1,15 @@
 ﻿#include "Framebuffer.h"
 
+/**
+ * @brief 创建帧缓冲区对象 (FBO)
+ * 
+ * @param width 纹理/RBO 宽度
+ * @param height 纹理/RBO 高度
+ * 
+ * @note 包含：
+ *       1. 颜色附件：纹理 (GL_RGB)
+ *       2. 深度/模板附件：Renderbuffer (GL_DEPTH24_STENCIL8)
+ */
 Framebuffer::Framebuffer(int width, int height) : width(width), height(height)
 {
     glGenFramebuffers(1, &fbo);
@@ -41,5 +51,4 @@ void Framebuffer::Bind()
 void Framebuffer::Unbind()
 {
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
-    // 通常我们在主循环或渲染器中重置视口，但确保解绑
 }

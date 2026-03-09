@@ -24,6 +24,9 @@ Worker::~Worker()
     Stop();
 }
 
+/**
+ * @brief 启动渲染工作线程
+ */
 void Worker::Start()
 {
     // 如果窗口被销毁，重建它
@@ -41,6 +44,9 @@ void Worker::Start()
     workerThread = std::thread(&Worker::ThreadMain, this);
 }
 
+/**
+ * @brief 停止渲染线程并清理资源
+ */
 void Worker::Stop()
 {
     running = false;
@@ -82,6 +88,14 @@ unsigned int Worker::GetReadyTexture()
     return frontTexture.load();
 }
 
+/**
+ * @brief 非阻塞尝试获取最新的完成帧纹理
+ * 
+ * @return unsigned int 纹理ID。若无新帧或未渲染完成返回 0。
+ * 
+ * @note 使用 glClientWaitSync(..., 0) 检查 GPU 处理进度。
+ *       若已完成，消耗掉 fence 并返回纹理 ID。
+ */
 unsigned int Worker::TryGetReadyTexture()
 {
     // 非阻塞检查：如果没有新栅欄，直接返回纹理（可能是旧的）
@@ -108,6 +122,16 @@ unsigned int Worker::TryGetReadyTexture()
     return 0;
 }
 
+/**
+ * @brief 渲染线程主循环
+ * 
+ * @note 独立线程逻辑：
+ *       1. 初始化 worker 上下文
+ *       2. 创建双缓冲 FBO (Front/Back)
+ *       3. 循环渲染场景到 Back Buffer
+ *       4. 插入 fence 同步标记
+ *       5. 交换 Front/Back Buffer 供主线程读取
+ */
 void Worker::ThreadMain()
 {
     if (!workerWindow)
@@ -139,6 +163,7 @@ void Worker::ThreadMain()
     {
         // 更新负载
         scene->SetWorkload(targetWorkload.load());
+        scene->SetSimulateWorkload(simulateWorkload.load());
 
         // 渲染到后缓冲
         backFbo->Bind();

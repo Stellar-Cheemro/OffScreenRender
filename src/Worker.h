@@ -8,6 +8,12 @@
 #include "Scene.h"
 #include <glad/glad.h>
 
+/**
+ * @brief 离屏渲染工作线程类
+ * 
+ * 负责在独立线程中执行 OpenGL 渲染指令，并将结果保存到纹理中。
+ * 使用双缓冲 FBO 和 glFenceSync 这一机制实现与主线程的无锁(或低锁)数据传递。
+ */
 class Worker
 {
 public:
@@ -17,6 +23,7 @@ public:
     void Start();
     void Stop();
     void SetSceneWorkload(int load) { targetWorkload.store(load); }
+    void SetSimulateWorkload(bool simulate) { simulateWorkload.store(simulate); }
 
     unsigned int GetTextureID() const;
     // 等待 GPU 完成工作并返回最新的纹理 ID
@@ -47,7 +54,8 @@ private:
     std::atomic<unsigned int> frontTexture;
     std::atomic<GLsync> latestFence;
     std::atomic<int> targetWorkload{0};
-    
+    std::atomic<bool> simulateWorkload{true};
+
     // FPS 计算
     std::atomic<double> fps{0.0};
 };

@@ -22,6 +22,12 @@ Renderer::~Renderer()
     glDeleteBuffers(1, &quadVBO);
 }
 
+/**
+ * @brief 初始化渲染器
+ * 
+ * @note 负责加载着色器、配置纹理单元、创建 FBO 和场景对象。
+ *       初始化用于全屏后处理的四边形。
+ */
 void Renderer::Init()
 {
     glEnable(GL_DEPTH_TEST);
@@ -47,6 +53,15 @@ void Renderer::SetSceneWorkload(int load) {
     if (scene) scene->SetWorkload(load);
 }
 
+void Renderer::SetSimulateWorkload(bool simulate) {
+    if (scene) scene->SetSimulateWorkload(simulate);
+}
+
+/**
+ * @brief 初始化全屏四边形 (VAO/VBO)
+ * 
+ * @note 该四边形覆盖整个 NDC 空间 [-1, 1]，用于显示 FBO 纹理。
+ */
 void Renderer::InitQuad()
 {
     float quadVertices[] = {// 标准化设备坐标中填充整个屏幕的四边形的顶点属性。
@@ -69,6 +84,13 @@ void Renderer::InitQuad()
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float)));
 }
 
+/**
+ * @brief 执行单线程渲染流程
+ * 
+ * @note 包含两个 Pass：
+ *       1. Off-screen Pass: 渲染 3D 场景到 FBO。
+ *       2. Post-process Pass: 将 FBO 纹理绘制到全屏四边形上。
+ */
 void Renderer::Render()
 {
     float time = (float)glfwGetTime();

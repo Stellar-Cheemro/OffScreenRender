@@ -11,6 +11,11 @@ ScreenRenderer::~ScreenRenderer()
     glDeleteBuffers(1, &quadVBO);
 }
 
+/**
+ * @brief 初始化后处理渲染器
+ * 
+ * @note 准备后处理着色器和全屏四边形资源。
+ */
 void ScreenRenderer::Init()
 {
     screenShader = new Shader("shaders/screen.vert", "shaders/screen.frag");
@@ -38,6 +43,13 @@ void ScreenRenderer::Init()
     glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void *)(2 * sizeof(float)));
 }
 
+/**
+ * @brief 将指定纹理绘制到全屏
+ * 
+ * @param textureID 输入纹理的 OpenGL ID
+ * 
+ * @note 禁用深度测试，执行简单的纹理贴图操作。
+ */
 void ScreenRenderer::DrawTexture(unsigned int textureID)
 {
     glDisable(GL_DEPTH_TEST);
