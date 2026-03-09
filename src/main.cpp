@@ -218,9 +218,6 @@ int main(int argc, char** argv)
             lastFps = frames / elapsed.count();
             lastAvgMs = (frames > 0) ? (accumFrameMs / frames) : 0.0;
             
-            // 控制台输出
-            // std::cout << "FPS: " << lastFps << "  Avg frame time: " << lastAvgMs << " ms" << std::endl;
-            
             frames = 0;
             accumFrameMs = 0.0;
             lastReport = now;
